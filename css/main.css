@@ -5,6 +5,11 @@
 }
 nav, main, footer{
     max-width: 1145px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+}
+p, span, a{
+    font-family: Gilroy-Regular, serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Gilroy-Bold, serif;
 }
