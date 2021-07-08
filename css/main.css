@@ -13,3 +13,95 @@ p, span, a{
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
 }
+.main-banner {
+    background: url(../img/main-banner.jpg);
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 34px;
+}
+.main-banner__paragraph, .main-banner__header{
+    color: #fff;
+}
+.main-banner__paragraph{
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+.main-banner__header{
+    font-size: 48px;
+}
+.additions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.additions__block{
+    width: 49%;
+    height: 222px;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+}
+.testimony{
+    background: linear-gradient(264.92deg, #F1525B -1.14%, #B566EF 100.74%);
+}
+.online-purchase{
+    background: linear-gradient(264.92deg, #B566EF -1.14%, #F1525B 100.74%);
+}
+.testimony__left, .online-purchase__left{
+    width: 55%;
+    justify-content: center;
+}
+.testimony__right, .online-purchase__right{
+    width: 45%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.testimony__right{
+    margin-top: 40px;
+}
+.online-purchase__right{
+    margin-top: 10px;
+}
+.testimony__left, .testimony__right, .online-purchase__left, .online-purchase__right{
+    display: flex;
+    flex-flow: column;
+}
+.testimony___header, .online-purchase__header{
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 9px;
+}
+.testimony__paragraph, .online-purchase__paragraph{
+    color: #fff;
+    font-size: 18px;
+    width: 90%;
+}
+.testimony__counter{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.testimony__num{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 7px;
+    color: #fff;
+}
+.online-purchase__image{
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+}
+.testimony__button, .online-purchase__button{
+    border: #fff 1px solid;
+    background: transparent;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+}
