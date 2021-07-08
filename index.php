@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+        <?php require_once ("common/nav.php"); ?>
+        <main>
+            <p>Hello World</p>
+        </main>
+        <?php require_once ("common/footer.php"); ?>
 </body>
 </html>
