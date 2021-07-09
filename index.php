@@ -8,6 +8,7 @@
     <title>ГЭКОМ-РКС</title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/e20143e24a.js" crossorigin="anonymous"></script>
 </head>
 <body>
         <?php require_once ("common/nav.php"); ?>

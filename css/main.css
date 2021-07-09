@@ -10,6 +10,36 @@ nav, main, footer{
 p, span, a{
     font-family: Gilroy-Regular, serif;
 }
+nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 27pt;
+    margin-bottom: 27pt;
+    max-width: 625.78pt;
+    max-height: 60pt;
+}
+.contact-data{
+    display: flex;
+    flex-direction: row;
+}
+.contact-numbers{
+    max-width: 150px;
+}
+.contact-data-separator{
+    width: 1px;
+    height: 46px;
+    margin-top: 16pt;
+    margin-left: 15.32pt;
+    margin-right: 15.32pt;
+    background-color: #E85222;
+}
+.contact-numbers__contact-number{
+    font-family: Gilroy-Bold, serif;
+}
+.address__info{
+    font-family: Gilroy-Regular, serif;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
 }
