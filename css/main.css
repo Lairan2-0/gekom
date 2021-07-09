@@ -15,23 +15,26 @@ nav{
     flex-direction: row;
     margin-top: 27pt;
     margin-bottom: 27pt;
-    max-width: 625.78pt;
     max-height: 60pt;
+    align-items: center;
+    justify-content: space-between;
 }
 .contact-data{
     display: flex;
     flex-direction: row;
 }
-.contact-numbers{
-    max-width: 150px;
+.contact-data__contact-numbers{
+    border-left: 1px solid #e85222;
+    border-right: 1px solid #e85222;
+    padding: 0 15px;
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.contact-data-separator{
-    width: 1px;
-    height: 46px;
-    margin-top: 16pt;
-    margin-left: 15.32pt;
-    margin-right: 15.32pt;
-    background-color: #E85222;
+.contact-data__address{
+    display: flex;
+    align-items: center;
 }
 .contact-numbers__contact-number{
     font-family: Gilroy-Bold, serif;
