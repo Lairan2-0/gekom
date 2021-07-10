@@ -58,12 +58,15 @@ nav{
     border: #e85222 1px solid;
     background: transparent;
     font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 10px 36px 10px 36px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: color 2s;
     color: #000000;
+}
+.navigation-buttons button:hover{
+    background-color: #e85222;
+    color: #ffffff;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
