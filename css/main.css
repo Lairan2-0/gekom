@@ -62,12 +62,13 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     transition: color 2s;
-    transition: background-color 2s;
+    transition: background-color 2s ease-out;
     color: #000000;
 }
 .navigation-buttons button:hover{
     background-color: #e85222;
     color: #ffffff;
+    background-position: left;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
