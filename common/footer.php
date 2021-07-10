@@ -8,16 +8,18 @@
                 </a>
             </div>
             <div class="tech-support">
-                <a class="tech-support__image-link" href="">
-                    <img class="image-link__image" src="/img/tech-support-logo.svg" alt="tech-support-logo">
-                </a>
-                <a class="tech-support__text-link" href="">
-                    <p class="text-link__text">Служба поддержки</p>
-                </a>
-            </div>
-            <div class="call-number">
-                <img class="call-number__image" src="/img/phonecall.svg" alt="phone">
-                <p class="call-number__text">+7 543 543 54 32</p>
+                <div class="tech-support__chat">
+                    <a class="chat__image-link" href="">
+                        <img class="image-link__image" src="/img/tech-support-logo.svg" alt="tech-support-logo">
+                    </a>
+                    <a class="chat__text-link" href="">
+                        <p class="text-link__text">Служба поддержки</p>
+                    </a>
+                </div>
+                <div class="tech-support__phone">
+                    <img class="phone__image" src="/img/phonecall.svg" alt="phone">
+                    <p class="phone__number">+7 543 543 54 32</p>
+                </div>
             </div>
         </div>
         <hr>

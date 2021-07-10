@@ -10,7 +10,7 @@
             <p class="contact-numbers__contact-number">8-909-100-10-30</p>
         </div>
         <div class="contact-data__address">
-            <p class="address__info">Пермский край, г. Губаха, пр-т Ленина,<br> д. 45, оф. 4, пом. 1</p>
+            <p class="address__info">Пермский край, г. Губаха,<br> пр-т Ленина, д. 45, оф. 4, пом. 1</p>
         </div>
     </div>
     <div class="navigation-buttons">

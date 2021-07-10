@@ -10,6 +10,7 @@ nav, main, footer{
 p, span, a{
     font-family: Gilroy-Regular, serif;
 }
+/*Navigation bar CSS*/
 nav{
     display: flex;
     flex-direction: row;
@@ -42,10 +43,32 @@ nav{
 .address__info{
     font-family: Gilroy-Regular, serif;
 }
-
+.navigation-buttons{
+    display: flex;
+}
+.navigation-buttons{
+    align-items: center;
+}
+.navigation-buttons a{
+    text-decoration: none;
+    color: #000000;
+    margin-left: 38px;
+}
+.navigation-buttons button{
+    border: #e85222 1px solid;
+    background: transparent;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border-radius: 5px;
+    color: #000000;
+}
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
 }
+/*Main CSS*/
 .main-banner {
     background: url(../img/main-banner.jpg);
     width: 100%;
@@ -137,4 +160,56 @@ h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
     font-size: 16px;
     color: #fff;
+}
+/*Footer CSS*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 27pt;
+    margin-bottom: 27pt;
+}
+.footer a, p{
+    color: #363E3F;
+}
+.upper-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.tech-support, .tech-support__chat, .tech-support__phone{
+    display: flex;
+}
+.tech-support__image-link{
+    text-decoration: none;
+}
+.chat__image-link{
+    margin-right: 17px;
+}
+.chat__text-link{
+    margin-right: 105px;
+    padding-top: 5px;
+}
+.phone__image{
+    margin-right:17px;
+}
+.phone__number{
+    font-family: Gilroy-Bold, serif;
+    font-size: large;
+    width: 140px;
+    padding-top: 5px;
+}
+.footer hr{
+    margin: 30px 0 30px 0;
+}
+.lower-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.copyright__text{
+    font-size: smaller;
+}
+.lower-footer__socials{
+    display: flex;
+}
+.socials__link{
+    margin-left: 23px;
 }
