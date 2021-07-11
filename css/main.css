@@ -61,14 +61,29 @@ nav{
     padding: 10px 36px 10px 36px;
     border-radius: 5px;
     cursor: pointer;
-    transition: color 2s;
-    transition: background-color 2s ease-out;
     color: #000000;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
 }
-.navigation-buttons button:hover{
-    background-color: #e85222;
-    color: #ffffff;
-    background-position: left;
+.navigation-buttons button:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    padding-top: 10px;
+    background-color: #E85222FF;
+    -webkit-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+.navigation-buttons button:hover:before{
+    width: 100%;
+    color: #fff;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
