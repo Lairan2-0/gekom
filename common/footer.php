@@ -3,8 +3,8 @@
     <div class="footer">
         <div class="upper-footer">
             <div class="upper-footer__privacy">
-                <a class="privacy__link" href="">
-                    <p class="link__text"> Политика обработки персональных данных</p>
+                <a class="privacy__text-link text-link" href="">
+                    <p class="text-link__text"> Политика обработки персональных данных</p>
                 </a>
             </div>
             <div class="tech-support">
@@ -12,7 +12,7 @@
                     <a class="chat__image-link" href="">
                         <img class="image-link__image" src="/img/tech-support-logo.svg" alt="tech-support-logo">
                     </a>
-                    <a class="chat__text-link" href="">
+                    <a class="chat__text-link text-link" href="">
                         <p class="text-link__text">Служба поддержки</p>
                     </a>
                 </div>
@@ -29,9 +29,9 @@
             </div>
             <div class="lower-footer__socials">
                 <p class="socials__text">Мы в социальных сетях: </p>
-                <a class="socials__link" href=""><img src="/img/odnoklassniki.svg" alt=""></a>
-                <a class="socials__link" href=""><img src="/img/vkontakte.svg" alt=""></a>
-                <a class="socials__link" href=""><img class="" src="/img/facebook.svg" alt=""></a>
+                <a class="socials__link odnoklassniki-link" href=""><span class="icon-odnoklassniki"></span></a>
+                <a class="socials__link vkontakte-link" href=""><span class="icon-vkontakte"></span></a>
+                <a class="socials__link facebook-link" href=""><span class="icon-facebook"></span></a>
             </div>
         </div>
     </div>
