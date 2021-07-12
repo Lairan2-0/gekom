@@ -8,7 +8,7 @@
     <title>ГЭКОМ-РКС</title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="simpleParallax.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
 </head>
 <body>
@@ -68,6 +68,39 @@
                     <div class="tariffs__heating tariffs__button">
                         <img class="tariffs__img-heating" src="img/heating.png" alt="Отопление иконки">
                         <h3 class="tariffs__button-header">Отопление</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="qna">
+                <h2 class="qna__header">Вопрос-ответ:</h2>
+                <div class="qna__dropdown">
+                    <button class="dropdown__dropbtn">Как изменить собственника в лицевом счёте?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                    </div>
+                </div>
+                <div class="qna__dropdown">
+                    <button class="dropdown__dropbtn">Что делать если установили новый ИПУ (индивидуальный прибор учёта) на горячую воду?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                    </div>
+                </div>
+                <div class="qna__dropdown">
+                    <button class="dropdown__dropbtn">Что делать если оплата не поступила на лицевой счет?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                    </div>
+                </div>
+                <div class="qna__dropdown">
+                    <button class="dropdown__dropbtn">Что делать если установили новый ИПУ (индивидуальный прибор учёта) на горячую воду?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                    </div>
+                </div>
+                <div class="qna__dropdown">
+                    <button class="dropdown__dropbtn">Как изменить собственника в лицевом счёте?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
                     </div>
                 </div>
             </div>
