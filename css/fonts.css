@@ -16,3 +16,40 @@
     url('../fonts/gilroy-bold/gilroy-bold.ttf') format('truetype'), /* Safari, Android, iOS */
     url('../fonts/gilroy-bold/gilroy-bold.svg#gilroy-bold') format('svg'); /* Chrome < 4, Legacy iOS */
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icooMoon/icomoon.eot?mdn7mb');
+    src:  url('../fonts/icooMoon/icomoon.eot?mdn7mb#iefix') format('embedded-opentype'),
+    url('../fonts/icooMoon/icomoon.ttf?mdn7mb') format('truetype'),
+    url('../fonts/icooMoon/icomoon.woff?mdn7mb') format('woff'),
+    url('../fonts/icooMoon/icomoon.svg?mdn7mb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon', serif !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+    content: "\e900";
+}
+.icon-odnoklassniki:before {
+    content: "\e901";
+}
+.icon-vkontakte:before {
+    content: "\e902";
+}

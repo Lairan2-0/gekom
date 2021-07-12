@@ -16,8 +16,10 @@
     <div class="navigation-buttons">
             <a class="navigation-buttons__index-button" href="#">Главная</a>
             <a class="navigation-buttons__about-button" href="#">О компании</a>
-            <a class="navigation-buttons__personal-area" href="#">
-                <button>Личный кабинет</button>
+            <a class="navigation-buttons__personal-area personal-area" href="#">
+                <button class="personal-area__btn">
+                    <span class="personal-area__none-active">Личный кабинет</span>
+                </button>
             </a>
     </div>
 </nav>

@@ -8,7 +8,8 @@
     <title>ГЭКОМ-РКС</title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/e20143e24a.js" crossorigin="anonymous"></script>
+    <script src="simpleParallax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
 </head>
 <body>
         <?php require_once ("common/nav.php"); ?>
@@ -60,17 +61,21 @@
             <div class="tariffs">
                 <h2 class="tariffs__header">Тарифы <span class="tariffs__header-bottom">на комунальные услуги</span></h2>
                 <div class="tariffs__buttons">
-                    <div class="tariffs__hot-water">
-                        <img class="tariffs__hot-water" src="img/hot-water.png" alt="Горячая вода иконка">
+                    <div class="tariffs__hot-water tariffs__button">
+                        <img class="tariffs__img-hot-water" src="img/hot-water.png" alt="Горячая вода иконка">
                         <h3 class="tariffs__button-header">Горячая вода</h3>
                     </div>
-                    <div class="tariffs__heating">
-                        <img class="tariffs__hot-water" src="img/heating.png" alt="Отопление иконки">
+                    <div class="tariffs__heating tariffs__button">
+                        <img class="tariffs__img-heating" src="img/heating.png" alt="Отопление иконки">
                         <h3 class="tariffs__button-header">Отопление</h3>
                     </div>
                 </div>
             </div>
+            <div class="parallax-points">
+                <img  class="parallax-points__image-top" src="img/parallax-points.svg" alt="Parallax points">
+            </div>
         </main>
         <?php require_once ("common/footer.php"); ?>
+        <script src="js/main.js"></script>
 </body>
 </html>
