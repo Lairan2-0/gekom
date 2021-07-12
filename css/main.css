@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6{
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
-    color: #edebfd;
+    color: #fff;
 }
 .tariffs__hot-water{
     padding: 74px 73px 60px;

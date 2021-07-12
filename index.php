@@ -53,7 +53,7 @@
                         </p>
                     </div>
                     <div class="online-purchase__right">
-                        <img class="online-purchase__image" src="img/phone.png" alt="Иконка телефона">
+                        <img class="online-purchase__image" src="img/phone.svg" alt="Иконка телефона">
                         <button class="online-purchase__button">Перейти к оплате</button>
                     </div>
                 </div>
@@ -62,11 +62,11 @@
                 <h2 class="tariffs__header">Тарифы <span class="tariffs__header-bottom">на комунальные услуги</span></h2>
                 <div class="tariffs__buttons">
                     <div class="tariffs__hot-water tariffs__button">
-                        <img class="tariffs__img-hot-water" src="img/hot-water.png" alt="Горячая вода иконка">
+                        <img class="tariffs__img-hot-water" src="img/hot-water.svg" alt="Горячая вода иконка">
                         <h3 class="tariffs__button-header">Горячая вода</h3>
                     </div>
                     <div class="tariffs__heating tariffs__button">
-                        <img class="tariffs__img-heating" src="img/heating.png" alt="Отопление иконки">
+                        <img class="tariffs__img-heating" src="img/heating.svg" alt="Отопление иконки">
                         <h3 class="tariffs__button-header">Отопление</h3>
                     </div>
                 </div>
