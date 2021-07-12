@@ -7,6 +7,20 @@ nav, main, footer{
     max-width: 1145px;
     margin: 0 auto;
 }
+main{
+    position: relative;
+}
+.main-banner, .additions, .tariffs{
+    position: relative;
+    z-index: 2;
+}
+.parallax-points__image-top{
+    position: absolute;
+    top: 80px;
+    right: -80px;
+    z-index: 1;
+    width: 450px;
+}
 p, span, a{
     font-family: Gilroy-Regular, serif;
 }
@@ -277,6 +291,37 @@ h1, h2, h3, h4, h5, h6{
 }
 .socials__link{
     margin-left: 23px;
+}
+.tariffs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tariffs__header{
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+}
+.tariffs__header-bottom{
+    font-size: 36px;
+}
+.tariffs__buttons{
+    display: flex;
+}
+.tariffs__button{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    border: rgba(181, 102, 239, .5) 1px solid;
+    align-items: center;
+}
+.tariffs__img-hot-water{
+    width: 50px;
+    height: 50px;
+}
+.tariffs__img-heating{
+    width: 64px;
+    height: 40px;
 }
 .socials__text{
     align-items: center;
