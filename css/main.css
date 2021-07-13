@@ -490,6 +490,7 @@ nav{
     width: 16px;
     height: 16px;
     margin-right: 12px;
+    cursor: pointer;
 }
 .qna__checkbox-description{
     font-size: 12px;
@@ -501,6 +502,11 @@ nav{
     border: none;
     background: #149859;
     padding: 15px 65px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+.qna__submit:hover{
+    background: #1bb166;
 }
 .dropdown__dropbtn {
     background-color: #3498DB;
@@ -537,4 +543,7 @@ nav{
 }
 .clicked{
     display: block;
+}
+.yandex-map{
+    margin-top: 80px;
 }

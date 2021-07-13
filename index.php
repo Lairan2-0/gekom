@@ -140,6 +140,9 @@
                 <img  class="parallax-points__image-bottom" src="img/parallax-points.svg" alt="Parallax points">
             </div>
         </main>
+        <div class="yandex-map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e562f2a82fcded4c2b45ff042924589037e6db38525e2aeb3b3cdcb826c8af7&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
         <?php require_once ("common/footer.php"); ?>
         <script src="js/main.js"></script>
 </body>
