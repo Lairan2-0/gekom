@@ -9,4 +9,3 @@ $(".dropdown__dropbtn").on('click', function() {
         $(this).parent().children(".dropdown-content").removeClass('clicked');
     }
 });
-

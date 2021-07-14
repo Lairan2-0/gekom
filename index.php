@@ -78,34 +78,36 @@
             <div class="qna">
                 <div class="qna__left-block">
                     <h2 class="qna__header">Вопрос-ответ:</h2>
-                    <div class="qna__dropdown">
-                        <button class="dropdown__dropbtn">Как изменить собственника в лицевом счёте?</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                    <div class="left-block__section">
+                        <div class="section__dropdown">
+                            <button class="dropdown__dropbtn">Как изменить собственника в лицевом счёте?</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="qna__dropdown">
-                        <button class="dropdown__dropbtn">Что делать если установили новый ИПУ (индивидуальный прибор учёта) на горячую воду?</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                        <div class="section__dropdown">
+                            <button class="dropdown__dropbtn">Что делать если установили новый ИПУ<br> (индивидуальный прибор учёта) на горячую воду?</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="qna__dropdown">
-                        <button class="dropdown__dropbtn">Что делать если оплата не поступила на лицевой счет?</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                        <div class="section__dropdown">
+                            <button class="dropdown__dropbtn">Что делать если оплата не поступила на лицевой счет?</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="qna__dropdown">
-                        <button class="dropdown__dropbtn">Что делать если установили новый ИПУ (индивидуальный прибор учёта) на горячую воду?</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                        <div class="section__dropdown">
+                            <button class="dropdown__dropbtn">Что делать если установили новый ИПУ<br> (индивидуальный прибор учёта) на горячую воду?</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="qna__dropdown">
-                        <button class="dropdown__dropbtn">Как изменить собственника в лицевом счёте?</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                        <div class="section__dropdown">
+                            <button class="dropdown__dropbtn">Как изменить собственника в лицевом счёте?</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <p class="dropdown-content__inside">Тут должен будет быть текст, который нам даст заказчик</p>
+                            </div>
                         </div>
                     </div>
                 </div>
