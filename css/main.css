@@ -7,17 +7,30 @@ nav, main, footer{
     max-width: 1145px;
     margin: 0 auto;
 }
+body{
+    background: #F6F5FF;
+}
 main{
     position: relative;
 }
-.main-banner, .additions, .tariffs{
+.main-banner, .additions, .tariffs, .qna{
     position: relative;
     z-index: 2;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Gilroy-Bold, serif;
 }
 .parallax-points__image-top{
     position: absolute;
     top: 80px;
     right: -80px;
+    z-index: 1;
+    width: 450px;
+}
+.parallax-points__image-bottom{
+    position: absolute;
+    top: 650px;
+    left: -80px;
     z-index: 1;
     width: 450px;
 }
@@ -120,9 +133,7 @@ nav{
     transition-delay: 0s;
     color: #fff;
 }
-h1, h2, h3, h4, h5, h6{
-    font-family: Gilroy-Bold, serif;
-}
+
 /*Main CSS*/
 .main-banner {
     background: url(../img/main-banner.jpg);
@@ -215,6 +226,18 @@ h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
     font-size: 16px;
     color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 0 #fff;
+    transition: box-shadow .3s ease-in-out;
+}
+.testimony__button:hover, .online-purchase__button:hover{
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+    box-shadow:0 0 10px #fff;
+}
+.tariffs__href{
+    text-decoration: none;
+    color: #000;
 }
 /*Footer CSS*/
 .footer{
@@ -234,9 +257,13 @@ h1, h2, h3, h4, h5, h6{
     opacity: 0.4;
     font-size: 24px;
     text-decoration: none;
+    margin-left: 23px;
 }
 .socials__link:hover{
     opacity: 1;
+}
+.odnoklassniki-link, .vkontakte-link, .facebook-link{
+    transition: color .1s ease-in-out;
 }
 .odnoklassniki-link:hover{
     color: #EE8208;
@@ -289,13 +316,11 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     align-items: center;
 }
-.socials__link{
-    margin-left: 23px;
-}
 .tariffs{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 80px;
 }
 .tariffs__header{
     display: flex;
@@ -311,18 +336,214 @@ h1, h2, h3, h4, h5, h6{
 .tariffs__button{
     display: flex;
     flex-direction: column;
-    padding: 100px;
     border: rgba(181, 102, 239, .5) 1px solid;
     align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+}
+.personal-area__btn{
+    border: #e85222 1px solid;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px 36px 10px 36px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000000;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+.tariffs__button:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(181, 102, 239, .5);
+    -webkit-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+    border-radius: 5px;
+}
+.tariffs__button:hover:before{
+    width: 100%;
+}
+.tariffs__hot-water:after{
+    content: 'Горячая вода';
+    padding: 0 0 60px 73px;
+    width: calc(100% - 73px);
+}
+.tariffs__heating:after{
+    content: 'Отопление';
+    padding: 0 0 60px 83px;
+    width: calc(100% - 83px);
+}
+.tariffs__button:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: calc(100% - 60px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s, color .35s;
+    font-family: Gilroy-Bold, serif;
+    font-size: 1.17em;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+}
+.tariffs__button:hover:after{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    color: #fff;
+}
+.tariffs__hot-water{
+    padding: 74px 73px 60px;
+    margin-right: 33px;
+}
+.tariffs__heating{
+    padding: 78px 83px 60px;
 }
 .tariffs__img-hot-water{
     width: 50px;
     height: 50px;
+    margin-bottom: 39px;
+    position: relative;
+    z-index: 2;
 }
 .tariffs__img-heating{
     width: 64px;
     height: 40px;
+    margin-bottom: 45px;
+    position: relative;
+    z-index: 2;
 }
 .socials__text{
     align-items: center;
+}
+.qna{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.qna__left-block{
+    width: 500px;
+}
+.qna__right-block{
+    width: 566px;
+    background: #fff;
+    border: rgba(181, 102, 239, .5) 1px solid;
+    border-radius: 5px;
+    padding: 40px 43px 45px;
+}
+.qna__form-header{
+    font-size: 26px;
+    text-align: center;
+}
+.qna__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 38px;
+}
+.qna__select-description{
+    font-size: 12px;
+    color: #818181;
+    margin-bottom: 5px;
+}
+.qna__select{
+    background: url(../img/dropdown.svg) no-repeat bottom 18px right 5px;
+    -webkit-appearance: none;
+}
+.qna__name, .qna__select, .qna__phone, .qna__email, .qna__another-question{
+    padding-bottom: 12px;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-bottom: rgba(181, 102, 239, .5) 1px solid;
+    font-family: Gilroy-Regular, serif;
+    margin-bottom: 45px;
+    outline: none;
+}
+.qna__phone, .qna__email{
+    width: 45%;
+}
+.qna__contacts{
+    display: flex;
+    justify-content: space-between;
+}
+.qna__form-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.qna__checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+.qna__checkbox{
+    border: 1px solid #818181;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.qna__checkbox-description{
+    font-size: 12px;
+    color: #818181;
+}
+.qna__submit{
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    background: #149859;
+    padding: 15px 65px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+.qna__submit:hover{
+    background: #1bb166;
+}
+.dropdown__dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown__dropbtn:hover, .dropdown__dropbtn:focus {
+    background-color: #2980B9;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+.clicked{
+    display: block;
+}
+.yandex-map{
+    margin-top: 80px;
 }
