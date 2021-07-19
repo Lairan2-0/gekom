@@ -565,7 +565,6 @@ nav{
     'bot-left bot-mid bot-right';
     align-items: center;
     padding: 10px;
-    margin: 0 387px 0 387px;
 }
 
 .menu-buttons > * {
@@ -580,18 +579,18 @@ nav{
     transition: all .2s ease-in-out;
 }
 
-.menu-buttons > *:hover {
+.menu-buttons > a:hover {
     transform: scale(1.1);
+}
+
+.menu-buttons a{
+    text-decoration: none;
 }
 
 .menu-buttons * p{
     font-family: Gilroy-SemiBold, serif;
     font-size: 21px;
     color: #ffffff;
-}
-
-.menu-buttons * a{
-    text-decoration: none;
 }
 
 .menu-buttons * *{

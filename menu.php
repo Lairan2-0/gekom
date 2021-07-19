@@ -11,62 +11,51 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
 </head>
 <body>
+
 <?php require_once ("common/nav.php"); ?>
 
-<div class="menu-buttons">
-    <div class="menu-buttons__mpa">
-        <a href="" class="mpa__link">
+<main>
+    <div class="menu-buttons">
+        <a href="" class="menu-buttons__mpa">
             <img class="link__image" src="/img/mpa.svg" alt="mpa-image">
             <p class="link__text">Мои лицевые счета</p>
         </a>
-    </div>
-    <div class="menu-buttons__payment">
-        <a href="" class="payment__link">
+        <a href="" class="menu-buttons__payment">
             <img class="link__image" src="/img/payment.svg" alt="payment">
             <p class="payment__text">Оплата</p>
         </a>
-    </div>
-    <div class="menu-buttons__online-application">
-        <a href="" class="online-application__link">
+        <a href="" class="menu-buttons__online-application">
             <img class="link__image" src="/img/online-application.svg" alt="online-application">
             <p class="online-application__text">Подать заявление онлайн</p>
         </a>
-    </div>
-    <div class="menu-buttons__get-reference">
-        <a href="" class="get-reference__link">
+
+        <a href="" class="menu-buttons__get-reference">
             <img class="link__image" src="/img/reference.svg" alt="reference">
             <p class="get-reference__text">Получить справку онлайн</p>
         </a>
-    </div>
-    <img class="menu-buttons__space-between" src="/img/space-between.svg" alt="space-between">
-    <div class="menu-buttons__accurals">
-        <a href="" class="accurals__link">
+        <img class="menu-buttons__space-between" src="/img/space-between.svg" alt="space-between">
+        <a href="" class="menu-buttons__accurals">
             <img class="link__image" src="/img/accurals.svg" alt="accurals">
             <p class="accurals__text">Начисления и платежи</p>
         </a>
-    </div>
 
-    <div class="menu-buttons__indications">
-        <a href="" class="indications__link">
+        <a href="" class="menu-buttons__indications">
             <img class="link__image" src="/img/indications.svg" alt="indications">
             <p class="indications__text">Показания</p>
         </a>
-    </div>
-    <div class="menu-buttons__question">
-        <a href="" class="question__link">
+        <a class="menu-buttons__question">
             <img class="link__image" src="/img/question.svg" alt="question">
             <p class="question__text">Задать вопрос</p>
         </a>
-    </div>
-    <div class="menu-buttons__main">
-        <a href="" class="main__link">
+        <a href="" class="menu-buttons__main">
             <img class="link__image" src="/img/back-arrow.svg" alt="back-arrow">
             <p class="main__text">Вернуться на главную</p>
         </a>
     </div>
-</div>
+</main>
 
 <?php require_once ("common/footer.php"); ?>
 <script src="js/main.js"></script>
+
 </body>
 </html>
