@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ГЭКОМ-РКС-МЕНЮ</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+</head>
+<body>
+<?php require_once ("common/nav.php"); ?>
+
+<div class="menu-buttons">
+    <div class="menu-buttons__mpa">
+        <a href="" class="mpa__link">
+            <img class="link__image" src="/img/mpa.svg" alt="mpa-image">
+            <p class="link__text">Мои лицевые счета</p>
+        </a>
+    </div>
+    <div class="menu-buttons__payment">
+        <a href="" class="payment__link">
+            <img class="link__image" src="/img/payment.svg" alt="payment">
+            <p class="payment__text">Оплата</p>
+        </a>
+    </div>
+    <div class="menu-buttons__online-application">
+        <a href="" class="online-application__link">
+            <img class="link__image" src="/img/online-application.svg" alt="online-application">
+            <p class="online-application__text">Подать заявление онлайн</p>
+        </a>
+    </div>
+    <div class="menu-buttons__get-reference">
+        <a href="" class="get-reference__link">
+            <img class="link__image" src="/img/reference.svg" alt="reference">
+            <p class="get-reference__text">Получить справку онлайн</p>
+        </a>
+    </div>
+    <img class="menu-buttons__space-between" src="/img/space-between.svg" alt="space-between">
+    <div class="menu-buttons__accurals">
+        <a href="" class="accurals__link">
+            <img class="link__image" src="/img/accurals.svg" alt="accurals">
+            <p class="accurals__text">Начисления и платежи</p>
+        </a>
+    </div>
+
+    <div class="menu-buttons__indications">
+        <a href="" class="indications__link">
+            <img class="link__image" src="/img/indications.svg" alt="indications">
+            <p class="indications__text">Показания</p>
+        </a>
+    </div>
+    <div class="menu-buttons__question">
+        <a href="" class="question__link">
+            <img class="link__image" src="/img/question.svg" alt="question">
+            <p class="question__text">Задать вопрос</p>
+        </a>
+    </div>
+    <div class="menu-buttons__main">
+        <a href="" class="main__link">
+            <img class="link__image" src="/img/back-arrow.svg" alt="back-arrow">
+            <p class="main__text">Вернуться на главную</p>
+        </a>
+    </div>
+</div>
+
+<?php require_once ("common/footer.php"); ?>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -555,3 +555,100 @@ nav{
 .yandex-map{
     margin-top: 80px;
 }
+/* Menu CSS */
+
+.menu-buttons {
+    display: grid;
+    grid-template-areas:
+    'top-left top-mid top-right'
+    'mid-left mid-mid mid-right'
+    'bot-left bot-mid bot-right';
+    align-items: center;
+    padding: 10px;
+    margin: 0 387px 0 387px;
+}
+
+.menu-buttons > * {
+    width: 361px;
+    height: 188px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 #fff;
+    background-color: transparent;
+    text-align: center;
+    padding: 36px;
+    margin: 14px 14px 14px 14px;
+    transition: all .2s ease-in-out;
+}
+
+.menu-buttons > *:hover {
+    transform: scale(1.1);
+}
+
+.menu-buttons * p{
+    font-family: Gilroy-SemiBold, serif;
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.menu-buttons * a{
+    text-decoration: none;
+}
+
+.menu-buttons * *{
+    margin: 14px 0 14px;
+}
+
+.menu-buttons__mpa{
+    background-color: #56BAFD;
+}
+
+.menu-buttons__payment{
+    background-color: #12C258;
+}
+
+.menu-buttons__online-application{
+    background-color: #FF835B;
+}
+
+.menu-buttons__get-reference{
+    background-color: #E53737;
+}
+
+.menu-buttons__space-between{
+    padding: 0;
+}
+
+.menu-buttons__accurals{
+    background-color: #406AFF;
+}
+
+.menu-buttons__indications{
+    background-color: #FF6DBC;
+}
+
+.menu-buttons__question{
+    background-color: #9E00FF;
+}
+
+.menu-buttons__main{
+    background-color: rgba(255,255,255,.5);
+    border: solid 1px rgba(181, 102, 239, 0.5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.menu-buttons__main p{
+    color: #000000;
+}
+
+.menu-buttons__mpa { grid-area: top-left; }
+.menu-buttons__payment { grid-area: top-mid; }
+.menu-buttons__online-application { grid-area: top-right; }
+
+.menu-buttons__get-reference { grid-area: mid-left; }
+.menu-buttons__space-between { grid-area: mid-mid; }
+.menu-buttons__accurals { grid-area: mid-right;}
+
+.menu-buttons__indications { grid-area: bot-left; }
+.menu-buttons__question { grid-area: bot-mid; }
+.menu-buttons__main { grid-area: bot-right; }
