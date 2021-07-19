@@ -43,7 +43,7 @@
             <img class="link__image" src="/img/indications.svg" alt="indications">
             <p class="indications__text">Показания</p>
         </a>
-        <a class="menu-buttons__question">
+        <a href="" class="menu-buttons__question">
             <img class="link__image" src="/img/question.svg" alt="question">
             <p class="question__text">Задать вопрос</p>
         </a>
