@@ -17,6 +17,9 @@ main{
     position: relative;
     z-index: 2;
 }
+input, button{
+    outline:none;
+}
 h1, h2, h3, h4, h5, h6{
     font-family: Gilroy-Bold, serif;
 }
@@ -84,6 +87,13 @@ nav{
 .navigation-buttons a:hover{
     color: #e85222;
 }
+.navigation-buttons__menu-link{
+    display: flex;
+    align-items: center;
+}
+.navigation-buttons__person-name{
+    margin-left: 5px;
+}
 .personal-area__btn{
     border: #e85222 1px solid;
     background: transparent;
@@ -97,6 +107,7 @@ nav{
     -webkit-transition: all .35s ease;
     -o-transition: all .35s ease;
     transition: all .35s ease;
+    margin-left: 38px;
 }
 .personal-area__btn:before{
     content: '';
@@ -652,3 +663,95 @@ nav{
 .menu-buttons__indications { grid-area: bot-left; }
 .menu-buttons__question { grid-area: bot-mid; }
 .menu-buttons__main { grid-area: bot-right; }
+
+/*popups*/
+.popup-shadow{
+    display: none;
+    background: rgba(0,0,0,.2);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+.popup-enter, .popup-registration{
+    position: fixed;
+    display: none;
+    z-index: 10;
+    background: #fff;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+}
+.popup-registration{
+    height: 60vh;
+    margin: -30vh -25vw;
+}
+.popup-enter{
+    height: 40vh;
+    margin: -20vh -25vw;
+}
+.popup-registration__form, .popup-enter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.popup-registration__enter, .popup-enter__registration, .popup-enter__forgot-password{
+    color: #22bae8;
+    margin-bottom: 2vh;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.popup-registration__enter:hover, .popup-enter__registration:hover, .popup-enter__forgot-password{
+    color: #e85222;
+}
+.popup-registration__close, .popup-enter__close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+.popup-enter__error{
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    right: 0;
+    text-align: center;
+}
+.popup-registration__close:hover, .popup-enter__close:hover{
+    color: #e85222;
+}
+.popup-registration__checkbox-wrapper{
+    display: flex;
+    align-items: center;
+}
+.popup-registration__header, .popup-registration__invoice, .popup-registration__name, .popup-registration__phone, .popup-registration__email,
+.popup-registration__checkbox-wrapper, .popup-enter__header, .popup-enter__invoice, .popup-enter__password{
+    margin-bottom: 2vh;
+}
+.popup-registration__checkbox-description{
+    margin-left: 10px;
+}
+.popup-registration__name, .popup-registration__invoice, .popup-registration__phone, .popup-registration__email, .popup-enter__invoice, .popup-enter__password{
+    width: 30vw;
+    height: 40px;
+    padding: 10px;
+    font-family: Gilroy-Regular, serif;
+}
+.popup-registration__submit, .popup-enter__submit{
+    padding: 10px 20px;
+    font-family: Gilroy-Regular, serif;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.popup-registration__submit:hover, .popup-enter__submit:hover{
+    border: 1px solid #e85222;
+}

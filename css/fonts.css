@@ -52,7 +52,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-facebook:before {
     content: "\e900";
 }
@@ -61,4 +60,21 @@
 }
 .icon-vkontakte:before {
     content: "\e902";
+}
+.icon-cabinet:before {
+    content: "\e903";
+}
+.icon-dropdown:before {
+    content: "\e904";
+}
+.icon-pencil:before {
+    content: "\e905";
+    color: #1d0071;
+}
+.icon-phone:before {
+    content: "\e906";
+    color: #1d0071;
+}
+.icon-cross:before {
+    content: "\e907";
 }

@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -61,7 +62,7 @@
     <div class="menu-buttons__main">
         <a href="" class="main__link">
             <img class="link__image" src="/img/back-arrow.svg" alt="back-arrow">
-            <p class="main__text">Вернуться на главную</p>
+            <p class="main__text">Выйти из аккаунта</p>
         </a>
     </div>
 </div>
