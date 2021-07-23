@@ -752,7 +752,8 @@ nav{
     color: #fff;
     border-radius: 5px;
     border: none;
-    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 1s;
 }
 .popup-registration__phone-wrapper{
     display: flex;
@@ -762,13 +763,15 @@ nav{
 .popup-registration__phone{
     width: 17.5vw;
 }
+
 .popup-registration__get-password{
     background: #12C258;
     color: #fff;
     border: none;
     border-radius: 5px;
     width: 12vw;
-    opacity: 0.5;
+    transition: opacity 1s;
+    cursor: pointer;
 }
 .popup-registration__password-wrapper{
     position: relative;
@@ -785,6 +788,14 @@ nav{
 }
 .popup-registration__icon-view:hover{
     color: #e85222;
+}
+.enabled-btn{
+    opacity: 1;
+    cursor: pointer;
+}
+.disabled{
+    opacity: 0.5;
+    cursor: default;
 }
 /*.popup-registration__submit:hover, .popup-enter__submit:hover{*/
 /*    border: 1px solid #e85222;*/

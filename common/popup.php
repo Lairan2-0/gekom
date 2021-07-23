@@ -4,15 +4,15 @@
     <form action="/" method="POST" class="popup-registration__form">
         <h2 class="popup-registration__header">Регистрация</h2>
         <p class="popup-registration__enter">Уже зарегистрированы? Войти</p>
-        <input type="text" name="userRegistrationName" class="popup-registration__name" placeholder="Фамилия, имя и отчество">
-        <input type="text" name="userRegistrationInvoice" class="popup-registration__invoice" required>
-        <input type="email" name="userRegistrationEmail" class="popup-registration__email" placeholder="Электронная почта">
+        <input type="text" name="userRegistrationName" class="popup-registration__name reg-form-inp" placeholder="Фамилия, имя и отчество">
+        <input type="text" name="userRegistrationInvoice" class="popup-registration__invoice reg-form-in" placeholder="Лицевой счет" required>
+        <input type="email" name="userRegistrationEmail" class="popup-registration__email reg-form-in" placeholder="Электронная почта">
         <div class="popup-registration__phone-wrapper">
-            <input type="tel" name="userRegistrationPhone" class="popup-registration__phone" placeholder="(___) ___ __ __" required>
+            <input type="tel" name="userRegistrationPhone" class="popup-registration__phone reg-form-in" placeholder="+7 (___) ___ __ __" required>
             <input type="button" value="Получить пароль" class="popup-registration__get-password">
         </div>
         <div class="popup-registration__password-wrapper">
-            <input type="password" class="popup-registration__password" placeholder="Введите пароль" name="userRegistrationPassword" required>
+            <input type="password" class="popup-registration__password reg-form-in" placeholder="Введите пароль" name="userRegistrationPassword" required>
             <a href="#" class="icon-view popup-registration__icon-view"></a>
         </div>
         <div class="popup-registration__checkbox-wrapper">
