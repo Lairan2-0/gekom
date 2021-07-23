@@ -7,9 +7,16 @@
         <input type="text" name="userRegistrationName" class="popup-registration__name" placeholder="Фамилия, имя и отчество">
         <input type="text" name="userRegistrationInvoice" class="popup-registration__invoice" required>
         <input type="email" name="userRegistrationEmail" class="popup-registration__email" placeholder="Электронная почта">
-        <input type="tel" name="userRegistrationPhone" class="popup-registration__phone" placeholder="Телефон" required>
+        <div class="popup-registration__phone-wrapper">
+            <input type="tel" name="userRegistrationPhone" class="popup-registration__phone" placeholder="(___) ___ __ __" required>
+            <input type="button" value="Получить пароль" class="popup-registration__get-password">
+        </div>
+        <div class="popup-registration__password-wrapper">
+            <input type="password" class="popup-registration__password" placeholder="Введите пароль" name="userRegistrationPassword" required>
+            <a href="#" class="icon-view popup-registration__icon-view"></a>
+        </div>
         <div class="popup-registration__checkbox-wrapper">
-            <input type="checkbox" name="userRegistrationCheckbox" class="popup-registration__checkbox">
+            <input type="checkbox" name="userRegistrationCheckbox" class="popup-registration__checkbox" required>
             <p class="popup-registration__checkbox-description">Я согласен на передачу персональных данных</p>
         </div>
         <input type="submit" value="Зарегитрироваться" class="popup-registration__submit">

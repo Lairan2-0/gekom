@@ -41,10 +41,27 @@ $(".popup-enter__registration").on( "click", function() {
     $(".popup-registration").css("display" , "block");
 });
 
+// forms
+$(document).ready(function (){
+    $(".popup-registration__password").prop( "disabled", true );
+    $(".popup-registration__get-password").prop( "disabled", true );
+    $(".popup-registration__submit").prop( "disabled", true );
+    setInterval(function() {
+        let pmc = $('.popup-registration__phone');
+        if ((pmc.val().indexOf("_") != -1) || pmc.val() == '') {
+            pmc.addClass('empty_field');
+        } else {
+            pmc.removeClass('empty_field');
+        }
+    });
+});
+
 // jquery masks
 $(document).ready(function(){
     $(".popup-registration__invoice").mask('000000000000000000000', {placeholder: "Лицевой счет"});
-   $(".popup-registration__phone").mask('+7 (000) 000-00-00', {placeholder: "+7 (999) 999-99-99"});
+    $('.popup-registration__phone').each(function(){
+        $(this).mask('+7 (000) 000-00-00');
+    });
 });
 
 // ajax

@@ -732,13 +732,14 @@ nav{
     align-items: center;
 }
 .popup-registration__header, .popup-registration__invoice, .popup-registration__name, .popup-registration__phone, .popup-registration__email,
-.popup-registration__checkbox-wrapper, .popup-enter__header, .popup-enter__invoice, .popup-enter__password{
+.popup-registration__checkbox-wrapper, .popup-enter__header, .popup-enter__invoice, .popup-enter__password, .popup-registration__password-wrapper{
     margin-bottom: 2vh;
 }
 .popup-registration__checkbox-description{
     margin-left: 10px;
 }
-.popup-registration__name, .popup-registration__invoice, .popup-registration__phone, .popup-registration__email, .popup-enter__invoice, .popup-enter__password{
+.popup-registration__name, .popup-registration__invoice, .popup-registration__phone, .popup-registration__email, .popup-enter__invoice,
+.popup-enter__password, .popup-registration__get-password, .popup-registration__password{
     width: 30vw;
     height: 40px;
     padding: 10px;
@@ -747,11 +748,44 @@ nav{
 .popup-registration__submit, .popup-enter__submit{
     padding: 10px 20px;
     font-family: Gilroy-Regular, serif;
-    background: transparent;
+    background: #e85222;
+    color: #fff;
     border-radius: 5px;
-    border: 1px solid;
-    cursor: pointer;
+    border: none;
+    opacity: 0.5;
 }
-.popup-registration__submit:hover, .popup-enter__submit:hover{
-    border: 1px solid #e85222;
+.popup-registration__phone-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
 }
+.popup-registration__phone{
+    width: 17.5vw;
+}
+.popup-registration__get-password{
+    background: #12C258;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 12vw;
+    opacity: 0.5;
+}
+.popup-registration__password-wrapper{
+    position: relative;
+}
+.popup-registration__icon-view{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    display: none;
+}
+.popup-registration__icon-view:hover{
+    color: #e85222;
+}
+/*.popup-registration__submit:hover, .popup-enter__submit:hover{*/
+/*    border: 1px solid #e85222;*/
+/*}*/
