@@ -16,10 +16,22 @@
     <div class="navigation-buttons">
             <a class="navigation-buttons__index-button" href="/index.php">Главная</a>
             <a class="navigation-buttons__about-button" href="#">О компании</a>
-            <a class="navigation-buttons__personal-area personal-area" href="/menu.php">
-                <button class="personal-area__btn">
-                    <span class="personal-area__none-active">Личный кабинет</span>
-                </button>
-            </a>
+        <?php
+            if (isset($_SESSION['user_id'])){
+                echo "
+                    <a class='navigation-buttons__menu-link' href='menu.php'>
+                        <span class='icon-cabinet navigation-buttons__icon-cabinet'></span>
+                        <span class='navigation-buttons__person-name'>".$_SESSION['user_name']."</span>
+                    </a>
+                ";
+            }else{
+                echo "
+                    <button class='personal-area__btn'>
+                        <span class='personal-area__none-active'>Личный кабинет</span>
+                    </button>
+                ";
+            }
+        ?>
+
     </div>
 </nav>

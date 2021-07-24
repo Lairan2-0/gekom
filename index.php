@@ -1,16 +1,7 @@
+<?php session_start()?>
 <!doctype html>
-<html lang="rus">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ГЭКОМ-РКС</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
-</head>
+<html lang="ru">
+<?php require_once ("common/head.php"); ?>
 <body>
         <?php require_once ("common/nav.php"); ?>
         <main>
@@ -145,7 +136,10 @@
         <div class="yandex-map">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e562f2a82fcded4c2b45ff042924589037e6db38525e2aeb3b3cdcb826c8af7&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
-        <?php require_once ("common/footer.php"); ?>
+        <?php
+        require_once ("common/footer.php");
+        require_once ("common/popup.php");
+        ?>
         <script src="js/main.js"></script>
 </body>
 </html>

@@ -62,7 +62,33 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-document-jackdaw:before {
+    content: "\e909";
+}
+.icon-mail:before {
+    content: "\e90a";
+}
+.icon-no-view:before {
+    content: "\e90b";
+}
+.icon-view:before {
+    content: "\e908";
+}
+.icon-cabinet:before {
+    content: "\e903";
+}
+.icon-dropdown:before {
+    content: "\e904";
+}
+.icon-pencil:before {
+    content: "\e905";
+}
+.icon-phone:before {
+    content: "\e906";
+}
+.icon-cross:before {
+    content: "\e907";
+}
 .icon-facebook:before {
     content: "\e900";
 }
