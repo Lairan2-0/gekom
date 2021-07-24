@@ -27,6 +27,16 @@
 }
 
 @font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/gilroy-medium/gilroy-medium.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-medium/gilroy-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/gilroy-medium/gilroy-medium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/gilroy-medium/gilroy-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/gilroy-medium/gilroy-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/gilroy-medium/gilroy-medium.svg#gilroy-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
     font-family: 'icomoon';
     src:  url('../fonts/icooMoon/icomoon.eot?mdn7mb');
     src:  url('../fonts/icooMoon/icomoon.eot?mdn7mb#iefix') format('embedded-opentype'),
@@ -61,4 +71,7 @@
 }
 .icon-vkontakte:before {
     content: "\e902";
+}
+.icon-questionInRectangle:before{
+    content: "\e9003";
 }
