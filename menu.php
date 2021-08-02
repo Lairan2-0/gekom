@@ -23,7 +23,9 @@
                     <img class="link__image" src="/img/reference.svg" alt="reference">
                     <p class="get-reference__text">Получить справку онлайн</p>
                 </a>
-                <img class="menu-buttons__space-between" src="/img/space-between.svg" alt="space-between">
+                <a href="/index.php" class="menu-buttons__space-between">
+                    <img class="" src="/img/space-between.svg" alt="space-between">
+                </a>
                 <a href="" class="menu-buttons__accurals">
                     <img class="link__image" src="/img/accurals.svg" alt="accurals">
                     <p class="accurals__text">Начисления и платежи</p>
@@ -39,7 +41,7 @@
                 </a>
                 <a href="" class="menu-buttons__main">
                     <img class="link__image" src="/img/back-arrow.svg" alt="back-arrow">
-                    <p class="main__text">Вернуться на главную</p>
+                    <p class="main__text">Выйти из аккаунта</p>
                 </a>
             </div>
         </main>
