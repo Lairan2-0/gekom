@@ -748,6 +748,16 @@ nav{
     font-family: Gilroy-Regular, serif;
     font-size: 16px;
 }
+.upper-info__right button:hover{
+    position: relative;
+    background-color: #0f6f41;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 16px 178px;
+    color: #FFFFFF;
+    font-family: Gilroy-Regular, serif;
+    font-size: 16px;
+}
 .mid-info h3{
     color: #717798;
     text-transform: uppercase;
@@ -815,8 +825,16 @@ nav{
     background-color: #149859;
     color: #FFFFFF;
 }
+.buttons__btn-activate:hover{
+    background-color: #0f6f41;
+    cursor: pointer;
+}
 .buttons__btn-deactivate{
     background-color: transparent;
+}
+.buttons__btn-deactivate:hover{
+    background-color: #dedede;
+    cursor: pointer;
 }
 /*popups*/
 .popup-shadow{
