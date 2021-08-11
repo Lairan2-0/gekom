@@ -89,6 +89,15 @@
         </div>
     </div>
     <hr class="mpa-hr">
+    <div class="contact-info">
+        <h3 class="contact-info__header">Контактная информация</h3>
+        <div class="contact-info__left">
+
+        </div>
+        <div class="contact-info__right">
+
+        </div>
+    </div>
 </main>
 
 <?php require_once("common/footer.php"); ?>
