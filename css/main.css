@@ -273,7 +273,7 @@ nav{
 .socials__link:hover{
     opacity: 1;
 }
-.odnoklassniki-link, .vkontakte-link, .facebook-link{
+.odnoklassniki-link, .vkontakte-link, .facebook-link, .questionRectangle{
     transition: color .1s ease-in-out;
 }
 .odnoklassniki-link:hover{
@@ -284,6 +284,12 @@ nav{
 }
 .facebook-link:hover{
     color: #3b5998;
+}
+.questionRectangle{
+    color: #5379FF;
+}
+.questionRectangle:hover{
+    color: #4363D6;
 }
 .upper-footer{
     display: flex;
@@ -568,8 +574,6 @@ nav{
 }
 /* Menu CSS */
 
-/* Menu CSS */
-
 .menu-buttons {
     display: grid;
     grid-template-areas:
@@ -843,12 +847,18 @@ nav{
     height: 40vh;
     margin: -20vh -25vw;
 }
-.popup-registration__form, .popup-enter form{
+.popup-registration__forms, .popup-enter form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%;
+}
+.popup-registration__form-bottom, .popup-registration__form-top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .popup-registration__enter, .popup-enter__registration, .popup-enter__forgot-password{
     color: #22bae8;
@@ -867,12 +877,21 @@ nav{
     border: none;
     cursor: pointer;
 }
-.popup-enter__error{
+.popup-enter__error, .popup-registration__error{
     position: absolute;
     width: 100%;
     top: 10px;
     right: 0;
     text-align: center;
+    display: none;
+}
+.popup-registration__update{
+    color: #e85222;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.popup-registration__update:hover{
+    color: #ea7f56;
 }
 .popup-registration__close:hover, .popup-enter__close:hover{
     color: #e85222;
@@ -950,3 +969,136 @@ nav{
 /*.popup-registration__submit:hover, .popup-enter__submit:hover{*/
 /*    border: 1px solid #e85222;*/
 /*}*/
+
+.mpa-hr{
+    height: 1px;
+    border: none;
+    background-color: #FF7070;
+    opacity: 50%;
+}
+.upper-info, .mid-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 24px 0 24px;
+}
+.upper-info{
+    margin-bottom: 40px;
+    font-family: Gilroy-Medium, serif;
+}
+.upper-info h3{
+    color: #717798;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Gilroy-SemiBold, serif;
+}
+.upper-info__left h3{
+    margin-bottom: 6px;
+}
+.upper-info p, .mid-info p{
+    font-family: Gilroy-Medium, serif;
+}
+.upper-info__left{
+    display: flex;
+    justify-content: left;
+}
+.left-info__full-name{
+    margin-bottom: 45px;
+}
+.left__right-info{
+    margin-left: 78px;
+}
+.right-info__address{
+    margin-bottom: 24px;
+}
+.right__count, .right__to-pay{
+    align-items: center;
+}
+.right__count{
+    margin-bottom: 37px;
+}
+.right__to-pay{
+    margin-bottom: 33px;
+}
+.upper-info__right h3{
+    margin-right: 18px;
+}
+.upper-info__right p{
+    font-family: Gilroy-SemiBold, serif;
+}
+.right__count{
+    display: flex;
+}
+.count__fillable{
+    color: #1D0071;
+    font-size: 21px;
+}
+.right__to-pay{
+    display: flex;
+}
+.to-pay__fillable{
+    color: #DA232E;
+    font-size: 21px;
+}
+.upper-info__right button{
+    position: relative;
+    background-color: #149859;
+    border-radius: 5px;
+    padding: 16px 178px;
+    color: #FFFFFF;
+    font-family: Gilroy-Regular, serif;
+    font-size: 16px;
+}
+.mid-info h3{
+    color: #717798;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-family: Gilroy-SemiBold, serif;
+}
+.serving__fillable{
+    font-size: 21px;
+    color:  #1D0071;
+    font-family: Gilroy-SemiBold, serif !important;
+}
+.mid-info__separator{
+    width: 1px;
+    height: 328px;
+    margin: -40px 0 0 40px ;
+    background-color: #FF7070;
+    opacity: 50%;
+}
+.mid-info__left div{
+    margin-bottom: 20px;
+}
+.mid-info__right{
+
+}
+.right__invoice-indication h3{
+    text-transform: none;
+    font-size: 21px;
+    color:  #1D0071;
+    font-family: Gilroy-SemiBold, serif ;
+}
+.right__invoice-indication{
+    margin-right: 13px;
+    margin-bottom: 32px;
+}
+.right__buttons{
+    display: flex;
+    margin-right: 13px;
+    justify-content: space-between;
+}
+.buttons__info{
+    display: flex;
+    flex-direction: column;
+}
+.buttons__buttons{
+    display: flex;
+    flex-direction: column;
+}
+.buttons__buttons button{
+    font-family: Gilroy-Medium, serif;
+    padding: 15px 60px;
+    border-radius: 5px;
+    font-size: 16px;
+}

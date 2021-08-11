@@ -43,83 +43,74 @@ $(".popup-enter__registration").on( "click", function() {
 
 // forms
 $(document).ready(function (){
+
     let btnGetPassword = $(".popup-registration__get-password");
     let btnRegistrationPassword = $(".popup-registration__password");
     let btnRegistrationForm = $(".popup-registration__submit");
-    let registrationForm = $('.popup-registration__form');
+    let registrationForm = $('.popup-registration__form-top');
     let btnGetPasswordCounter = 0;
-    btnGetPassword.addClass('disabled');
-    btnRegistrationForm.addClass('disabled');
-    btnRegistrationPassword.prop( "disabled", true ).addClass('empty_field');;
-    btnGetPassword.prop( "disabled", true );
+    if (registrationForm.length){
+        btnGetPassword.addClass('disabled');
+        btnRegistrationForm.addClass('disabled');
+        btnRegistrationPassword.prop( "disabled", true ).addClass('empty_field');;
+        btnGetPassword.prop( "disabled", true );
+        function checkInput(){
+            registrationForm.find('.reg-form-in').each(function(){
+                if($(this).val() != ''){
+                    // Если поле не пустое удаляем класс-указание
+                    $(this).removeClass('empty_field');
+                } else {
+                    // Если поле пустое добавляем класс-указание
+                    $(this).addClass('empty_field');
+                }
+            });
+        }
 
-    function checkInput(){
-        registrationForm.find('.reg-form-in').each(function(){
-            if($(this).val() != ''){
-                // Если поле не пустое удаляем класс-указание
-                $(this).removeClass('empty_field');
+        // Функция подсветки незаполненных полей
+        function lightEmpty(){
+            registrationForm.find('.empty_field').css({'border-color':'#d8512d'});
+            // Через полсекунды удаляем подсветку
+            setTimeout(function(){
+                registrationForm.find('.empty_field').removeAttr('style');
+            },500);
+        }
+
+        setInterval(function() {
+            let pmc = $('.popup-registration__phone');
+            if ((pmc.val().indexOf("_") != -1) || pmc.val() === '') {
+                pmc.addClass('empty_field');
             } else {
-                // Если поле пустое добавляем класс-указание
-                $(this).addClass('empty_field');
+                btnGetPasswordCounter++;
+                if (btnGetPasswordCounter == 1){
+                    btnGetPassword.prop( "disabled", false ).removeClass("disabled");
+                }
+            }
+
+            checkInput();
+
+            let sizeEmpty = registrationForm.find('.empty_field').length;
+            if (sizeEmpty > 0 || !$(".popup-registration__checkbox").is(':checked')){
+                if(btnRegistrationForm.hasClass('disabled')){
+                    return false
+                } else {
+                    btnRegistrationForm.addClass('disabled')
+                }
+            } else {
+                btnRegistrationForm.removeClass('disabled')
+            }
+        });
+
+        btnRegistrationForm.click(function(){
+            if($(this).hasClass('disabled')){
+                // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
+                lightEmpty();
+                return false
+            } else {
+                // Все хорошо, все заполнено, отправляем форму
+                registrationForm.submit();
             }
         });
     }
-
-    // Функция подсветки незаполненных полей
-    function lightEmpty(){
-        registrationForm.find('.empty_field').css({'border-color':'#d8512d'});
-        // Через полсекунды удаляем подсветку
-        setTimeout(function(){
-            registrationForm.find('.empty_field').removeAttr('style');
-        },500);
-    }
-
-    setInterval(function() {
-        let pmc = $('.popup-registration__phone');
-        if ((pmc.val().indexOf("_") != -1) || pmc.val() == '') {
-            pmc.addClass('empty_field');
-        } else {
-            btnGetPasswordCounter++;
-            if (btnGetPasswordCounter === 1){
-                btnGetPassword.prop( "disabled", false ).removeClass("disabled");
-            }
-        }
-
-        checkInput();
-
-        let sizeEmpty = registrationForm.find('.empty_field').length;
-        if (sizeEmpty > 0 || !$(".popup-registration__checkbox").is(':checked')){
-            if(btnRegistrationForm.hasClass('disabled')){
-                return false
-            } else {
-                btnRegistrationForm.addClass('disabled')
-            }
-        } else {
-            btnRegistrationForm.removeClass('disabled')
-        }
-    });
-
-    btnGetPassword.on("click", function (){
-        btnRegistrationPassword.addClass('enabled-btn').prop( "disabled", false );
-        $(".popup-registration__name").prop( "disabled", true );
-        $(".popup-registration__invoice").prop( "disabled", true );
-        $(".popup-registration__email").prop( "disabled", true );
-        $(".popup-registration__phone").prop( "disabled", true );
-        $(".popup-registration__get-password").prop( "disabled", true ).addClass("disabled");
-    });
-
-
-
-    btnRegistrationForm.click(function(){
-        if($(this).hasClass('disabled')){
-            // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
-            lightEmpty();
-            return false
-        } else {
-            // Все хорошо, все заполнено, отправляем форму
-            registrationForm.submit();
-        }
-    });
 });
 
 // jquery masks
@@ -131,7 +122,7 @@ $(document).ready(function(){
 });
 
 // ajax
-$(".popup-registration__form").on( "submit", function(e) {
+$(".popup-registration__form-top").on( "submit", function(e) {
     e.preventDefault();
     $.ajax({
         type: "POST",
@@ -140,9 +131,32 @@ $(".popup-registration__form").on( "submit", function(e) {
         success: function (response){
             let jsonData = JSON.parse(response);
             if (jsonData.success == "1"){
-                location.href = 'my_profile.php';
-            }else{
-                $(".popup-enter__error").text("Аккаунт с такими данными уже существует");
+                $(".popup-registration__password").addClass('enabled-btn').prop( "disabled", false );
+                $(".popup-registration__name").prop( "disabled", true );
+                $(".popup-registration__invoice").prop( "disabled", true );
+                $(".popup-registration__email").prop( "disabled", true );
+                $(".popup-registration__phone").prop( "disabled", true );
+                $(".popup-registration__get-password").prop( "disabled", true ).addClass("disabled");
+            }else if (jsonData.success == "0"){
+                $(".popup-registration__error").show();
+            }
+        },
+        dataType: "html"
+    });
+});
+
+$(".popup-registration__form-bottom").on( "submit", function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "../common/registration.php",
+        data: $(this).serialize(),
+        success: function (response){
+            let jsonData = JSON.parse(response);
+            if (jsonData.success == "2"){
+                location.href = 'menu.php';
+            }else if (jsonData.success == "3"){
+                $(".popup-registration__error").show();
             }
         },
         dataType: "html"
@@ -160,7 +174,7 @@ $(".popup-enter__form").on( "submit", function(e) {
             if (jsonData.success == "1"){
                 location.href = 'menu.php';
             }else{
-                $(".popup-enter__error").text("Неправильный лийцевой счет или пароль");
+                $(".popup-enter__error").show()
             }
         },
         dataType: "html"
@@ -172,7 +186,7 @@ $(".menu-buttons__main").on( "click", function() {
         type: "POST",
         url: "../common/logout.php",
         success: function (){
-            location.href = 'index.php';
+            location.href = '/';
         },
         dataType: "html"
     });

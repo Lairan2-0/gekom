@@ -7,6 +7,7 @@
         <?php
         echo "ГЭКОМ-РКС";
         echo ($title == "menu") ? " | Меню" : "";
+        echo ($title == "mpa") ? " | Лицевые платежи" : "";
         ?>
         </title>
     <link rel="stylesheet" href="css/fonts.css">
