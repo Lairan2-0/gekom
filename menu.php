@@ -1,4 +1,8 @@
-<?php session_start()?>
+<?php
+session_start();
+$chekAuth = true;
+require_once ("common/chekAuth.php");
+?>
 <!doctype html>
 <html lang="en">
 <?php $title="menu"; require_once ("common/head.php"); ?>

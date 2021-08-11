@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php
+session_start();
+require_once ("common/chekAuth.php");
+?>
 <!doctype html>
 <html lang="ru">
 <?php require_once ("common/head.php"); ?>

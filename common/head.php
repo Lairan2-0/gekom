@@ -9,7 +9,7 @@
         echo ($title == "menu") ? " | Меню" : "";
         echo ($title == "mpa") ? " | Лицевые платежи" : "";
         ?>
-        </title>
+    </title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>

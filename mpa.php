@@ -1,4 +1,8 @@
-<?php session_start()?>
+<?php
+session_start();
+$chekAuth = true;
+require_once ("common/chekAuth.php");
+?>
 <!doctype html>
 <html lang="rus">
 <?php $title="mpa"; require_once ("common/head.php"); ?>
@@ -11,7 +15,7 @@
             <div class="left__left-info">
                 <div class="left-info__full-name">
                     <h3 class="full-name__indication">ФИО:</h3>
-                    <p class="full-name__fillable">Орлов Василий Юрьевич</p>
+                    <p class="full-name__fillable"><?= $_SESSION['user_name']?></p>
                 </div>
                 <div class="left-info__accordance">
                     <h3 class="accordance__indications">ДОГОВОР ЖКХ:</h3>
@@ -87,3 +91,7 @@
 
 </body>
 </html>
+
+<?
+$_SESSION['afa'];
+?>
