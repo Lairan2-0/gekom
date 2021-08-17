@@ -11,7 +11,7 @@
             <div class="left__left-info">
                 <div class="left-info__full-name">
                     <h3 class="full-name__indication">ФИО:</h3>
-                    <p class="full-name__fillable">Орлов Василий Юрьевич</p>
+                    <p class="full-name__fillable"><?= $_SESSION['user_name']?></p>
                 </div>
                 <div class="left-info__accordance">
                     <h3 class="accordance__indications">ДОГОВОР ЖКХ:</h3>
@@ -32,7 +32,7 @@
         <div class="upper-info__right">
             <div class="right__count">
                 <h3 class="count__indications">ЛИЦЕВОЙ СЧЁТ:</h3>
-                <p class="count__fillable">1149410082</p>
+                <p class="count__fillable"><?= $_SESSION['user_invoice']?></p>
             </div>
             <div class="right__to-pay">
                 <h3 class="to-pay__indications">К ОПЛАТЕ:</h3>
