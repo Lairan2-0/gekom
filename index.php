@@ -107,7 +107,7 @@ require_once ("common/chekAuth.php");
                 </div>
                 <div class="qna__right-block">
                     <h3 class="qna__form-header">Отправить вопрос или сообщение</h3>
-                    <form action="" class="qna__form">
+                    <form action="/" class="qna__form" method="POST">
                         <p class="qna__select-description">Введите тип обращения</p>
                         <select name="questionType" class="qna__select">
                             <option value="-1">Ваш вопрос или предложение</option>
@@ -115,10 +115,10 @@ require_once ("common/chekAuth.php");
                             <option value="2">Какой-то тип</option>
                             <option value="3">Какой-то тип</option>
                         </select>
-                        <input type="text" name="questionName" class="qna__name" placeholder="Фамилия, имя и отчество">
+                        <input type="text" name="questionName" class="qna__name" placeholder="Фамилия, имя и отчество"  value="<?=$_SESSION['user_name'];?>">
                         <div class="qna__contacts">
-                            <input type="tel" name="questionPhone" class="qna__phone" placeholder="Телефон">
-                            <input type="email" name="questionEmail" class="qna__email" placeholder="Электронная почта">
+                            <input type="tel" name="questionPhone" class="qna__phone" placeholder="Телефон" value="<?=$_SESSION['user_phone'];?>">
+                            <input type="email" name="questionEmail" class="qna__email" placeholder="Электронная почта" value="<?=$_SESSION['user_email'];?>">
                         </div>
                         <input type="text" name="questionAnother" class="qna__another-question" placeholder="Ваш вопрос или предложение">
                         <div class="qna__form-footer">
@@ -142,6 +142,7 @@ require_once ("common/chekAuth.php");
         <?php
         require_once ("common/footer.php");
         require_once ("common/popup.php");
+        require_once ("common/notification.php");
         ?>
         <script src="js/main.js"></script>
 </body>

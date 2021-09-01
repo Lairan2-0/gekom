@@ -43,7 +43,6 @@ $(".popup-enter__registration").on( "click", function() {
 
 // forms
 $(document).ready(function (){
-
     let btnGetPassword = $(".popup-registration__get-password");
     let btnRegistrationPassword = $(".popup-registration__password");
     let btnRegistrationForm = $(".popup-registration__submit");
@@ -111,6 +110,13 @@ $(document).ready(function (){
             }
         });
     }
+    setInterval(function() {
+        if (($(".qna__select").val() == "-1") | ($(".qna__name").val() == "") | ($(".qna__phone").val() == "") | ($(".qna__email").val() == "") | ($(".qna__another-question").val() == "") | (!$(".qna__checkbox").is(':checked'))){
+            $(".qna__submit").prop( "disabled", true ).addClass('qna__submit-disabled');
+        }else{
+            $(".qna__submit").prop( "disabled", false ).removeClass('qna__submit-disabled');
+        }
+    });
 });
 
 // jquery masks
@@ -120,6 +126,27 @@ $(document).ready(function(){
         $(this).mask('+7 (999) 99-99-99', {autoсlear: false});
     });
 });
+
+//notification anim
+function notificationAnim(item){
+    let seconds = 5, int;
+    let opacity = 1;
+    int = setInterval(function() {
+        if (seconds > 0) {
+            seconds = seconds - 0.05;
+            if (seconds <= 2){
+                if (opacity > 0) {
+                    opacity = opacity - 0.05;
+                }
+                item.css("opacity" , opacity);
+            }
+        } else {
+            clearInterval(int);
+            item.css("display" , "none");
+            item.css("opacity" , 1);
+        }
+    }, 50);
+}
 
 // ajax
 $(".popup-registration__form-top").on( "submit", function(e) {
@@ -175,6 +202,34 @@ $(".popup-enter__form").on( "submit", function(e) {
                 location.href = 'menu.php';
             }else{
                 $(".popup-enter__error").show()
+            }
+        },
+        dataType: "html"
+    });
+});
+
+$(".qna__form").on( "submit", function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "../common/qna-send.php",
+        data: $(this).serialize(),
+        success: function (response){
+            let jsonData = JSON.parse(response);
+            if (jsonData.success == "1"){
+                let notificationSuccess = $(".form-send-successfully");
+                notificationSuccess.css("display" , "flex");
+                $(".qna__select").val("-1");
+                $(".qna__name").val("");
+                $(".qna__phone").val("");
+                $(".qna__email").val("");
+                $(".qna__another-question").val("");
+                $(".qna__checkbox").prop('checked', false);
+                notificationAnim(notificationSuccess);
+            }else{
+                let notificationError = $(".form-send-error");
+                notificationError.css("display" , "flex");
+                notificationAnim(notificationError);
             }
         },
         dataType: "html"

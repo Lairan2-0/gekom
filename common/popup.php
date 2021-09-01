@@ -32,8 +32,8 @@
     <form action="/" method="POST" class="popup-enter__form">
         <h2 class="popup-enter__header">Вход</h2>
         <p class="popup-enter__registration">Еще не зарегистрированы? Зарегистрироваться</p>
-        <input type="text" name="userEnterInvoice" class="popup-enter__invoice" placeholder="Лицевой счет" required>
-        <input type="password" name="userEnterPassword" class="popup-enter__password" placeholder="Пароль" required>
+        <input type="text" name="userEnterInvoice" class="popup-enter__invoice auth-form-in" placeholder="Лицевой счет" required>
+        <input type="password" name="userEnterPassword" class="popup-enter__password auth-form-in" placeholder="Пароль" required>
         <p class="popup-enter__forgot-password">Забыли пароль?</p>
         <input type="submit" value="Войти" class="popup-enter__submit">
     </form>
