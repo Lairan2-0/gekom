@@ -36,7 +36,7 @@ require_once ("common/chekAuth.php");
         <div class="upper-info__right">
             <div class="right__count">
                 <h3 class="count__indications">ЛИЦЕВОЙ СЧЁТ:</h3>
-                <p class="count__fillable">1149410082</p>
+                <p class="count__fillable"><?= $_SESSION['user_invoice']?></p>
             </div>
             <div class="right__to-pay">
                 <h3 class="to-pay__indications">К ОПЛАТЕ:</h3>
@@ -84,6 +84,15 @@ require_once ("common/chekAuth.php");
         </div>
     </div>
     <hr class="mpa-hr">
+    <div class="contact-info">
+        <h3 class="contact-info__header">Контактная информация</h3>
+        <div class="contact-info__left">
+
+        </div>
+        <div class="contact-info__right">
+
+        </div>
+    </div>
 </main>
 
 <?php require_once("common/footer.php"); ?>

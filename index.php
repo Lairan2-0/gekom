@@ -10,14 +10,14 @@ require_once ("common/chekAuth.php");
         <main>
             <div class="main-banner">
                 <p class="main-banner__paragraph">
-                    Делаем вашу жизнь проще!
+                    Делаем Вашу жизнь проще!
                 </p>
                 <h1 class="main-banner__header">
                     Расчетно-кассовый<br>центр
                 </h1>
             </div>
             <div class="additions">
-                <div class="additions__block testimony">
+                <div class="additions__block testimony desktop">
                     <div class="testimony__left">
                         <h2 class="testimony___header">
                             Передача показаний
@@ -37,7 +37,29 @@ require_once ("common/chekAuth.php");
                         <a href="#"><button class="testimony__button">Передать показания</button></a>
                     </div>
                 </div>
-                <div class="additions__block online-purchase">
+                <div class="additions__block testimony mobile">
+                    <div class="testimony__up">
+                        <h2 class="testimony___header">
+                            Передача показаний
+                        </h2>
+                    </div>
+                    <div class="testimony__mid">
+                        <p class="testimony__paragraph">
+                            Полная история показаний счетчиков и начислений по воде доступна в вашем личном кабинете
+                        </p>
+                        <div class="testimony__counter">
+                            <p class="testimony__num">5</p>
+                            <p class="testimony__num">9</p>
+                            <p class="testimony__num">5</p>
+                            <p class="testimony__num">3</p>
+                            <p class="testimony__num">8</p>
+                        </div>
+                    </div>
+                    <div class="testimony__down">
+                        <a href="#"><button class="testimony__button">Передать показания</button></a>
+                    </div>
+                </div>
+                <div class="additions__block online-purchase desktop">
                     <div class="online-purchase__left">
                         <h2 class="online-purchase__header">
                             Онлайн-оплата
@@ -48,6 +70,22 @@ require_once ("common/chekAuth.php");
                     </div>
                     <div class="online-purchase__right">
                         <img class="online-purchase__image" src="img/phone.svg" alt="Иконка телефона">
+                        <a href="#"><button class="online-purchase__button">Перейти к оплате</button></a>
+                    </div>
+                </div>
+                <div class="additions__block online-purchase mobile">
+                    <div class="online-purchase__up">
+                        <h2 class="online-purchase__header">
+                            Онлайн-оплата
+                        </h2>
+                    </div>
+                    <div class="online-purchase__mid">
+                        <p class="online-purchase__paragraph">
+                            Подробная информация по вашему счету или задолженности доступна в вашем личном кабинете
+                        </p>
+                        <img class="online-purchase__image" src="img/phone.svg" alt="Иконка телефона">
+                    </div>
+                    <div class="online-purchase__down">
                         <a href="#"><button class="online-purchase__button">Перейти к оплате</button></a>
                     </div>
                 </div>

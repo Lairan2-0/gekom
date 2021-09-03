@@ -614,7 +614,7 @@ nav{
 .menu-buttons * p{
     font-family: Gilroy-SemiBold, serif;
     font-size: 21px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .menu-buttons * *{
@@ -1149,4 +1149,113 @@ nav{
 }
 .notification__paragraph{
     color: #fff;
+}
+.mobile{
+    display: none;
+}
+@media screen and (max-width: 1145px){
+    nav, main, footer{
+        padding: 14px;
+    }
+    .main-banner{
+        background: url(../img/main-banner-mobile.jpg) center no-repeat;
+        background-size: contain;
+        height: 60vw;
+        width: 92vw;
+        padding: 5vw;
+    }
+    .main-banner__paragraph{
+        font-size: 4vw;
+        width: 40%;
+    }
+    .main-banner__header{
+        font-size: 7vw;
+        width: 50%;
+    }
+    .additions{
+        flex-direction: column;
+    }
+    .additions__block{
+        height: 60vw;
+        padding: 5vw;
+    }
+    .testimony{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        width: 90vw;
+        margin-left: 1.2vw;
+        margin-bottom: 5vw;
+    }
+    .testimony__mid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .testimony___header{
+        font-size: 6vw;
+    }
+    .testimony__paragraph{
+        font-size: 4.2vw;
+        width: 44vw;
+    }
+    .testimony__counter{
+        width: auto;
+    }
+    .testimony__counter p{
+        font-size: 4vw;
+        padding: 1.5vw 1.2vw;
+        margin: 1vw;
+    }
+    .testimony__down{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vw;
+        font-family: Gilroy-Medium, serif;
+    }
+    .testimony__button{
+        padding: 3vw 4vw;
+        font-size: 4vw;
+        border: #fff 2px solid;
+    }
+    .online-purchase{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        width: 90vw;
+        margin-left: 1.2vw;
+    }
+    .online-purchase__mid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .online-purchase__header{
+        font-size: 6vw;
+    }
+    .online-purchase__paragraph{
+        font-size: 4.2vw;
+    }
+    .online-purchase__down{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vw;
+        font-family: Gilroy-Medium, serif;
+    }
+    .online-purchase__button{
+        padding: 3vw 4vw;
+        font-size: 4vw;
+        border: #fff 2px solid;
+    }
+    .online-purchase__image{
+        width: 15vw;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
 }
