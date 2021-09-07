@@ -1161,8 +1161,9 @@ nav{
         background: url(../img/main-banner-mobile.jpg) center no-repeat;
         background-size: contain;
         height: 60vw;
-        width: 92vw;
-        padding: 5vw;
+        width: 90vw;
+        padding: 0 3vw;
+        margin: 0 auto;
     }
     .main-banner__paragraph{
         font-size: 4vw;
@@ -1184,8 +1185,7 @@ nav{
         height: auto;
         flex-direction: column;
         width: 90vw;
-        margin-left: 1.2vw;
-        margin-bottom: 5vw;
+        margin: 0 auto 5vh;
     }
     .testimony__mid{
         display: flex;
@@ -1224,7 +1224,7 @@ nav{
         height: auto;
         flex-direction: column;
         width: 90vw;
-        margin-left: 1.2vw;
+        margin: 0 auto;
     }
     .online-purchase__mid{
         display: flex;
@@ -1257,5 +1257,79 @@ nav{
     }
     .mobile{
         display: flex;
+    }
+    .tariffs{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 80px 3vw 0;
+    }
+    .tariffs__hot-water, .tariffs__img-hot-water, .tariffs__img-heating{
+        margin: 0;
+    }
+    .tariffs__hot-water{
+        padding: 30px 4vw;
+        margin-bottom: 30px;
+    }
+    .tariffs__heating{
+        padding: 40px 4vw;
+    }
+    .tariffs__buttons{
+        margin-top: 50px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .tariffs__button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .tariffs__button-header {
+        font-size: 4vw;
+        margin-left: 3vw;
+    }
+    .tariffs__img-hot-water{
+        width: 10vw;
+        height: auto;
+    }
+    .tariffs__img-heating{
+        width: 12vw;
+        height: auto;
+    }
+    .qna{
+        flex-direction: column;
+    }
+    .qna__left-block, .left-block__section, .section__dropdown, .dropdown__dropbtn{
+        width: 100%;
+    }
+    .dropdown__dropbtn br{
+        display: none;
+    }
+    .qna__header{
+        text-align: center;
+    }
+    .left-block__section{
+        margin-top: 20px;
+    }
+    .qna__right-block{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .parallax-points__image-top{
+        right: 80px;
+    }
+    .qna__contacts{
+        flex-direction: column;
+    }
+    .qna__phone, .qna__email{
+        width: 100%;
+    }
+    .qna__form-footer{
+        flex-direction: column;
+    }
+    .qna__submit{
+        margin-top: 30px;
+    }
+    .qna__checkbox-description br{
+        display: none;
     }
 }
