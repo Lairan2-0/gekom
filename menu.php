@@ -18,7 +18,7 @@ require_once ("common/chekAuth.php");
                     <img class="link__image" src="/img/payment.svg" alt="payment">
                     <p class="payment__text">Оплата</p>
                 </a>
-                <a href="" class="menu-buttons__online-application">
+                <a href="/statement.php" class="menu-buttons__online-application">
                     <img class="link__image" src="/img/online-application.svg" alt="online-application">
                     <p class="online-application__text">Подать заявление онлайн</p>
                 </a>
