@@ -23,7 +23,7 @@ require_once ("common/chekAuth.php");
                     <p class="online-application__text">Подать заявление онлайн</p>
                 </a>
 
-                <a href="" class="menu-buttons__get-reference">
+                <a href="/reference.php" class="menu-buttons__get-reference">
                     <img class="link__image" src="/img/reference.svg" alt="reference">
                     <p class="get-reference__text">Получить справку онлайн</p>
                 </a>
