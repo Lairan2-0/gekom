@@ -2,4 +2,4 @@
 $host = 'localhost';
 $database = 'gekom';
 $user = 'root';
-$password = '';
+$password = 'root';

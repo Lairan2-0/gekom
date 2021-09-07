@@ -43,6 +43,7 @@ $(".popup-enter__registration").on( "click", function() {
 
 // forms
 $(document).ready(function (){
+    // reg form
     let btnGetPassword = $(".popup-registration__get-password");
     let btnRegistrationPassword = $(".popup-registration__password");
     let btnRegistrationForm = $(".popup-registration__submit");
@@ -110,13 +111,69 @@ $(document).ready(function (){
             }
         });
     }
-    setInterval(function() {
-        if (($(".qna__select").val() == "-1") | ($(".qna__name").val() == "") | ($(".qna__phone").val() == "") | ($(".qna__email").val() == "") | ($(".qna__another-question").val() == "") | (!$(".qna__checkbox").is(':checked'))){
-            $(".qna__submit").prop( "disabled", true ).addClass('qna__submit-disabled');
-        }else{
-            $(".qna__submit").prop( "disabled", false ).removeClass('qna__submit-disabled');
+
+    // auth form
+    let btnAuthForm = $(".popup-enter__submit");
+    let authForm = $('.popup-enter__form');
+    if (authForm.length){
+        btnAuthForm.addClass('disabled');
+        function checkInput(){
+            authForm.find('.auth-form-in').each(function(){
+                if($(this).val() != ''){
+                    // Если поле не пустое удаляем класс-указание
+                    $(this).removeClass('empty_field');
+                } else {
+                    // Если поле пустое добавляем класс-указание
+                    $(this).addClass('empty_field');
+                }
+            });
         }
-    });
+
+        // Функция подсветки незаполненных полей
+        function lightEmpty(){
+            authForm.find('.empty_field').css({'border-color':'#d8512d'});
+            // Через полсекунды удаляем подсветку
+            setTimeout(function(){
+                authForm.find('.empty_field').removeAttr('style');
+            },500);
+        }
+
+        setInterval(function() {
+            let pmc = $('.popup-registration__phone');
+            if ((pmc.val().indexOf("_") != -1) || pmc.val() === '') {
+                pmc.addClass('empty_field');
+            } else {
+                btnGetPasswordCounter++;
+                if (btnGetPasswordCounter == 1){
+                    btnGetPassword.prop( "disabled", false ).removeClass("disabled");
+                }
+            }
+
+            checkInput();
+
+            let sizeEmpty = registrationForm.find('.empty_field').length;
+            if (sizeEmpty > 0 || !$(".popup-registration__checkbox").is(':checked')){
+                if(btnRegistrationForm.hasClass('disabled')){
+                    return false
+                } else {
+                    btnRegistrationForm.addClass('disabled')
+                }
+            } else {
+                btnRegistrationForm.removeClass('disabled')
+            }
+        });
+
+        btnRegistrationForm.click(function(){
+            if($(this).hasClass('disabled')){
+                // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
+                lightEmpty();
+                return false
+            } else {
+                // Все хорошо, все заполнено, отправляем форму
+                registrationForm.submit();
+            }
+        });
+    }
 });
 
 // jquery masks
@@ -125,28 +182,10 @@ $(document).ready(function(){
     $('.popup-registration__phone').each(function(){
         $(this).mask('+7 (999) 99-99-99', {autoсlear: false});
     });
+    $('.qna__phone').each(function(){
+        $(this).mask('+7 (999) 99-99-99', {autoсlear: false});
+    });
 });
-
-//notification anim
-function notificationAnim(item){
-    let seconds = 5, int;
-    let opacity = 1;
-    int = setInterval(function() {
-        if (seconds > 0) {
-            seconds = seconds - 0.05;
-            if (seconds <= 2){
-                if (opacity > 0) {
-                    opacity = opacity - 0.05;
-                }
-                item.css("opacity" , opacity);
-            }
-        } else {
-            clearInterval(int);
-            item.css("display" , "none");
-            item.css("opacity" , 1);
-        }
-    }, 50);
-}
 
 // ajax
 $(".popup-registration__form-top").on( "submit", function(e) {
@@ -190,6 +229,24 @@ $(".popup-registration__form-bottom").on( "submit", function(e) {
     });
 });
 
+$(".qna__form").on( "submit", function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "../common/qnaSubmit.php",
+        data: $(this).serialize(),
+        success: function (response){
+            let jsonData = JSON.parse(response);
+            if (jsonData.success == "2"){
+                location.href = 'menu.php';
+            }else if (jsonData.success == "3"){
+                $(".popup-registration__error").show();
+            }
+        },
+        dataType: "html"
+    });
+});
+
 $(".popup-enter__form").on( "submit", function(e) {
     e.preventDefault();
     $.ajax({
@@ -208,34 +265,6 @@ $(".popup-enter__form").on( "submit", function(e) {
     });
 });
 
-$(".qna__form").on( "submit", function(e) {
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "../common/qna-send.php",
-        data: $(this).serialize(),
-        success: function (response){
-            let jsonData = JSON.parse(response);
-            if (jsonData.success == "1"){
-                let notificationSuccess = $(".form-send-successfully");
-                notificationSuccess.css("display" , "flex");
-                $(".qna__select").val("-1");
-                $(".qna__name").val("");
-                $(".qna__phone").val("");
-                $(".qna__email").val("");
-                $(".qna__another-question").val("");
-                $(".qna__checkbox").prop('checked', false);
-                notificationAnim(notificationSuccess);
-            }else{
-                let notificationError = $(".form-send-error");
-                notificationError.css("display" , "flex");
-                notificationAnim(notificationError);
-            }
-        },
-        dataType: "html"
-    });
-});
-
 $(".menu-buttons__main").on( "click", function() {
     $.ajax({
         type: "POST",
@@ -245,9 +274,4 @@ $(".menu-buttons__main").on( "click", function() {
         },
         dataType: "html"
     });
-});
-
-// hamburger click
-$(".hamburger").on("click", function (){
-    $(".mobile-menu").slideToggle(500);
 });

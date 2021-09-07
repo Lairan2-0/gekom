@@ -7,21 +7,21 @@ require_once ("common/chekAuth.php");
 <html lang="en">
 <?php $title="menu"; require_once ("common/head.php"); ?>
 <body>
-<?php require_once("common/nav.php"); ?>
-<main>
-    <div class="menu-buttons">
-        <a href="/mpa.php" class="menu-buttons__mpa">
-            <img class="link__image" src="/img/mpa.svg" alt="mpa-image">
-            <p class="link__text">Мои лицевые счета</p>
-        </a>
-        <a href="" class="menu-buttons__payment">
-            <img class="link__image" src="/img/payment.svg" alt="payment">
-            <p class="payment__text">Оплата</p>
-        </a>
-        <a href="" class="menu-buttons__online-application">
-            <img class="link__image" src="/img/online-application.svg" alt="online-application">
-            <p class="online-application__text">Подать заявление онлайн</p>
-        </a>
+        <?php require_once("common/nav.php"); ?>
+        <main>
+            <div class="menu-buttons">
+                <a href="/mpa.php" class="menu-buttons__mpa">
+                    <img class="link__image" src="/img/mpa.svg" alt="mpa-image">
+                    <p class="link__text">Мои лицевые счета</p>
+                </a>
+                <a href="/purchase.php" class="menu-buttons__payment">
+                    <img class="link__image" src="/img/payment.svg" alt="payment">
+                    <p class="payment__text">Оплата</p>
+                </a>
+                <a href="" class="menu-buttons__online-application">
+                    <img class="link__image" src="/img/online-application.svg" alt="online-application">
+                    <p class="online-application__text">Подать заявление онлайн</p>
+                </a>
 
                 <a href="" class="menu-buttons__get-reference">
                     <img class="link__image" src="/img/reference.svg" alt="reference">
