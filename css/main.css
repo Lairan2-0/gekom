@@ -998,7 +998,7 @@ nav{
 /*    border: 1px solid #e85222;*/
 /*}*/
 
-.mpa-hr, .purchase-hr, .statement-hr{
+.orange-hr{
     height: 1px;
     border: none;
     background-color: #FF7070;
@@ -1249,7 +1249,7 @@ nav{
 .statement-indicators{
     padding: 30px;
 }
-.statement-table{
+.table{
     width: 100%;
     border: 1px solid rgba(181, 102, 239, .5);
     border-radius: 5px;
@@ -1257,23 +1257,52 @@ nav{
     font-weight: 300;
     border-collapse: collapse;
 }
-.statement-table th, .statement-table td{
+.table th, .table td{
     border-left: 1px dashed rgba(181, 102, 239, .5);
     border-right: 1px dashed rgba(181, 102, 239, .5);
 }
 
-.statement-table__headers th{
+.table__header-row th{
     width: 20%;
     padding: 5px;
+    height: 1px;
 }
-.statement-table__headers-wrapper{
+.table__head-wrapper{
     background: rgba(181, 102, 239, .25);
-    padding: 10px 0;
+    padding: 10px;
     border-radius: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.statement-table__content td{
+.table__row td{
     padding: 10px;
     border-bottom: 1px solid rgba(181, 102, 239, .5);
+}
+
+.payments-table__headers th{
+    width: auto;
+}
+.payments-table__total td, .payments-table__month td{
+    border-left: none;
+    border-right: none;
+}
+.payments__date-range-picker{
+    margin: 20px auto;
+    display: block;
+    font-family: Gilroy-Regular, serif;
+    padding: 5px 10px;
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(181, 102, 239, .5);
+    border-radius: 5px;
+    height: 30px;
+    background: #fff;
+}
+.ranges, .drp-calendar, .drp-buttons, .cancelBtn, .applyBtn{
+    font-family: Gilroy-Regular, serif;
 }
 @media screen and (max-width: 1145px){
     main, footer{

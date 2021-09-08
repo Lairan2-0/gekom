@@ -30,7 +30,7 @@ require_once ("common/chekAuth.php");
                 <a href="/index.php" class="menu-buttons__space-between">
                     <img class="" src="/img/space-between.svg" alt="space-between">
                 </a>
-                <a href="" class="menu-buttons__accurals">
+                <a href="/payments.php" class="menu-buttons__accurals">
                     <img class="link__image" src="/img/accurals.svg" alt="accurals">
                     <p class="accurals__text">Начисления и платежи</p>
                 </a>

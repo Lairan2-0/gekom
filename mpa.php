@@ -9,7 +9,7 @@ require_once ("common/chekAuth.php");
 <body>
 <?php require_once("common/nav.php"); ?>
 <main>
-    <hr class="mpa-hr">
+    <hr class="mpa-hr orange-hr">
     <div class="upper-info">
         <div class="upper-info__left">
             <div class="left__left-info">
@@ -45,7 +45,7 @@ require_once ("common/chekAuth.php");
             <button class="right__payment-btn">ОПЛАТИТЬ</button>
         </div>
     </div>
-    <hr class="mpa-hr">
+    <hr class="mpa-hr orange-hr">
     <div class="mid-info">
         <div class="mid-info__left">
             <div class="left__serving">
@@ -83,7 +83,7 @@ require_once ("common/chekAuth.php");
             </div>
         </div>
     </div>
-    <hr class="mpa-hr">
+    <hr class="mpa-hr orange-hr">
     <div class="contact-info">
         <h3 class="contact-info__header">Контактная информация</h3>
         <div class="contact-info__left">

@@ -251,3 +251,62 @@ $(".menu-buttons__main").on( "click", function() {
 $(".hamburger").on("click", function (){
     $(".mobile-menu").slideToggle(500);
 });
+
+// Date Range Picker
+$(function() {
+
+    let start = moment().subtract(29, 'days');
+    let end = moment();
+
+    function cb(start, end) {
+        $('.payments__date-range-picker-span').html(start.format('DD.MM.YYYY') + ' - ' + end.format('DD.MM.YYYY'));
+    }
+
+    $('.payments__date-range-picker').daterangepicker({
+        startDate: start,
+        endDate: end,
+        locale: {
+            format: 'DD.MM.YYYY',
+            "applyLabel": "Ок",
+            "cancelLabel": "Отмена",
+            "fromLabel": "От",
+            "toLabel": "До",
+            "customRangeLabel": "Произвольный",
+            "daysOfWeek": [
+                "Вс",
+                "Пн",
+                "Вт",
+                "Ср",
+                "Чт",
+                "Пт",
+                "Сб"
+            ],
+            "monthNames": [
+                "Январь",
+                "Февраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь"
+            ],
+            firstDay: 1
+        },
+        ranges: {
+            'Сегодня': [moment(), moment()],
+            'Вчера': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Последние 7 дней': [moment().subtract(6, 'days'), moment()],
+            'Последние 30 дней': [moment().subtract(29, 'days'), moment()],
+            'Этот месяц': [moment().startOf('month'), moment().endOf('month')],
+            'Предыдущий месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});

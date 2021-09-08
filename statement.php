@@ -8,29 +8,29 @@ require_once ("common/chekAuth.php");
 <body>
 <?php require_once ("common/nav.php"); ?>
 <main>
-    <hr class="statement-hr">
+    <hr class="statement-hr orange-hr">
     <div class="statement__top-line">
         <h3 class="statement__header">Мои заявления</h3>
         <button class="statement__btn">ПОДАТЬ ЗАЯВЛЕНИЕ</button>
     </div>
-    <hr class="statement-hr">
+    <hr class="statement-hr orange-hr">
     <div class="statement-indicators">
-        <table class="statement-table">
-            <tr class="statement-table__headers">
-                <th><div class="statement-table__headers-wrapper">Тип заявления</div></th>
-                <th><div class="statement-table__headers-wrapper">Номер заявления</div></th>
-                <th><div class="statement-table__headers-wrapper">Дата подачи</div></th>
-                <th><div class="statement-table__headers-wrapper">Статус</div></th>
-                <th><div class="statement-table__headers-wrapper">Текст заявления</div></th>
+        <table class="statement-table table">
+            <tr class="statement-table__headers table__header-row">
+                <th><div class="statement-table__headers-wrapper table__head-wrapper">Тип заявления</div></th>
+                <th><div class="statement-table__headers-wrapper table__head-wrapper">Номер заявления</div></th>
+                <th><div class="statement-table__headers-wrapper table__head-wrapper">Дата подачи</div></th>
+                <th><div class="statement-table__headers-wrapper table__head-wrapper">Статус</div></th>
+                <th><div class="statement-table__headers-wrapper table__head-wrapper">Текст заявления</div></th>
             </tr>
-            <tr class="statement-table__content">
+            <tr class="statement-table__content table__row">
                 <td>Текст</td>
                 <td>Текст</td>
                 <td>Текст</td>
                 <td>Текст</td>
                 <td>Текст</td>
             </tr>
-            <tr class="statement-table__content">
+            <tr class="statement-table__content table__row">
                 <td>Текст</td>
                 <td>Текст</td>
                 <td>Текст</td>
@@ -39,7 +39,7 @@ require_once ("common/chekAuth.php");
             </tr>
         </table>
     </div>
-    <hr class="statement-hr">
+    <hr class="statement-hr orange-hr">
 </main>
 <?php
 require_once("common/footer.php");

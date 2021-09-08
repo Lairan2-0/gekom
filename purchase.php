@@ -8,7 +8,7 @@ require_once ("common/chekAuth.php");
 <body>
 <?php require_once ("common/nav.php"); ?>
 <main>
-    <hr class="purchase-hr">
+    <hr class="purchase-hr orange-hr">
     <div class="purchase__top-line">
         <div class="purchase__indications-wrapper">
             <h3 class="purchase__indications">ЛИЦЕВОЙ СЧЁТ:</h3>
@@ -23,7 +23,7 @@ require_once ("common/chekAuth.php");
             <p class="purchase__name-str">Иван Иванов</p>
         </div>
     </div>
-    <hr class="purchase-hr">
+    <hr class="purchase-hr orange-hr">
     <div class="purchase-indicators">
         <div class="purchase-indicators__heating">
             <h3 class="purchase-indicators__heating-header">Отопление</h3>
@@ -37,7 +37,7 @@ require_once ("common/chekAuth.php");
             <p>Итого к оплате <b>0.00</b> руб., в том числе коммисия <b>0.00</b> руб.</p>
         </div>
     </div>
-    <hr class="purchase-hr">
+    <hr class="purchase-hr orange-hr">
     <div class="purchase-payment">
         <form action="/purchase.php" method="post">
             <div class="purchase-payment__sand-to-mail">
@@ -50,7 +50,7 @@ require_once ("common/chekAuth.php");
             <input type="submit" value="Отправить" class="purchase-indicators__submit">
         </form>
     </div>
-    <hr class="purchase-hr">
+    <hr class="purchase-hr orange-hr">
 </main>
 <?php
 require_once("common/footer.php");
