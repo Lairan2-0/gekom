@@ -35,11 +35,11 @@ require_once ("common/chekAuth.php");
                     <p class="accurals__text">Начисления и платежи</p>
                 </a>
 
-                <a href="" class="menu-buttons__indications">
+                <a href="/testimony.php" class="menu-buttons__indications">
                     <img class="link__image" src="/img/indications.svg" alt="indications">
                     <p class="indications__text">Показания</p>
                 </a>
-                <a href="" class="menu-buttons__question">
+                <a href="/question.php" class="menu-buttons__question">
                     <img class="link__image" src="/img/question.svg" alt="question">
                     <p class="question__text">Задать вопрос</p>
                 </a>

@@ -681,15 +681,12 @@ nav{
 
 /* MPA CSS*/
 .mpa-hr{
-    height: 1px;
-    border: none;
-    background-color: #FF7070;
-    opacity: 50%;
+    margin-bottom: 20px;
 }
 .upper-info, .mid-info{
     display: flex;
     justify-content: space-between;
-    margin: 40px 24px 0 24px;
+    margin: 40px 24px 0;
 }
 .upper-info{
     margin-bottom: 40px;
@@ -1004,11 +1001,6 @@ nav{
     background-color: #FF7070;
     opacity: 50%;
 }
-.upper-info, .mid-info{
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 24px 0 24px;
-}
 .upper-info{
     margin-bottom: 40px;
     font-family: Gilroy-Medium, serif;
@@ -1093,9 +1085,6 @@ nav{
 }
 .mid-info__left div{
     margin-bottom: 20px;
-}
-.mid-info__right{
-
 }
 .right__invoice-indication h3{
     text-transform: none;
@@ -1303,6 +1292,41 @@ nav{
 }
 .ranges, .drp-calendar, .drp-buttons, .cancelBtn, .applyBtn{
     font-family: Gilroy-Regular, serif;
+}
+.testimony-indicators{
+    margin: 50px 0;
+}
+.testimony__header{
+    margin-bottom: 20px;
+}
+.testimony-table__checkbox{
+    display: flex;
+    margin-top: 10px;
+}
+.testimony-table__count-input{
+    width: 100%;
+    font-family: Gilroy-Regular, serif;
+    padding: 5px 10px;
+}
+.testimony-table__checkbox input{
+    margin-right: 5px;
+}
+.testimony-table__final td{
+    border-left: none;
+    border-right: none;
+}
+.testimony-table__final button{
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    background: #149859;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+.testimony-table__final button:hover{
+    background: #12C258;
 }
 @media screen and (max-width: 1145px){
     main, footer{

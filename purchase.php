@@ -1,5 +1,6 @@
 <?php
 session_start();
+$chekAuth = true;
 require_once ("common/chekAuth.php");
 ?>
 <!doctype html>
@@ -50,7 +51,6 @@ require_once ("common/chekAuth.php");
             <input type="submit" value="Отправить" class="purchase-indicators__submit">
         </form>
     </div>
-    <hr class="purchase-hr orange-hr">
 </main>
 <?php
 require_once("common/footer.php");

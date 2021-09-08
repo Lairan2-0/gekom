@@ -34,7 +34,7 @@ require_once ("common/chekAuth.php");
                             <p class="testimony__num">3</p>
                             <p class="testimony__num">8</p>
                         </div>
-                        <a href="#"><button class="testimony__button">Передать показания</button></a>
+                        <a href="/testimony.php"><button class="testimony__button">Передать показания</button></a>
                     </div>
                 </div>
                 <div class="additions__block testimony mobile">
@@ -56,7 +56,7 @@ require_once ("common/chekAuth.php");
                         </div>
                     </div>
                     <div class="testimony__down">
-                        <a href="#"><button class="testimony__button">Передать показания</button></a>
+                        <a href="/testimony.php"><button class="testimony__button">Передать показания</button></a>
                     </div>
                 </div>
                 <div class="additions__block online-purchase desktop">
@@ -70,7 +70,7 @@ require_once ("common/chekAuth.php");
                     </div>
                     <div class="online-purchase__right">
                         <img class="online-purchase__image" src="img/phone.svg" alt="Иконка телефона">
-                        <a href="#"><button class="online-purchase__button">Перейти к оплате</button></a>
+                        <a href="/payments.php"><button class="online-purchase__button">Перейти к оплате</button></a>
                     </div>
                 </div>
                 <div class="additions__block online-purchase mobile">
@@ -86,7 +86,7 @@ require_once ("common/chekAuth.php");
                         <img class="online-purchase__image" src="img/phone.svg" alt="Иконка телефона">
                     </div>
                     <div class="online-purchase__down">
-                        <a href="#"><button class="online-purchase__button">Перейти к оплате</button></a>
+                        <a href="/purchase.php"><button class="online-purchase__button">Перейти к оплате</button></a>
                     </div>
                 </div>
             </div>

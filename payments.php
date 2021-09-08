@@ -1,5 +1,6 @@
 <?php
 session_start();
+$chekAuth = true;
 require_once ("common/chekAuth.php");
 ?>
 <!doctype html>
@@ -109,7 +110,6 @@ require_once ("common/chekAuth.php");
             </tr>
         </table>
     </div>
-    <hr class="payments-hr orange-hr">
 </main>
 <?php
 require_once("common/footer.php");
