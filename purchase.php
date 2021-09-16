@@ -13,7 +13,7 @@ require_once ("common/chekAuth.php");
     <div class="purchase__top-line">
         <div class="purchase__indications-wrapper">
             <h3 class="purchase__indications">ЛИЦЕВОЙ СЧЁТ:</h3>
-            <p class="purchase__fillable">1149410082</p>
+            <p class="purchase__fillable"><?=$_SESSION['user_invoice']?></p>
         </div>
         <div class="purchase__to-pay-wrapper">
             <h3 class="purchase__to-pay">К ОПЛАТЕ</h3>
@@ -21,21 +21,21 @@ require_once ("common/chekAuth.php");
         </div>
         <div class="purchase__name-wrapper">
             <h3 class="purchase__name">ИМЯ ПОЛУЧАТЕЛЯ</h3>
-            <p class="purchase__name-str">Иван Иванов</p>
+            <p class="purchase__name-str"><?=$_SESSION['user_name']?></p>
         </div>
     </div>
     <hr class="purchase-hr orange-hr">
     <div class="purchase-indicators">
         <div class="purchase-indicators__heating">
             <h3 class="purchase-indicators__heating-header">Отопление</h3>
-            <input type="number" class="purchase-indicators__heating-num" placeholder="0.00">
+            <input type="number" class="purchase-indicators__heating-num standard-input" placeholder="0.00">
         </div>
         <div class="purchase-indicators__hws">
             <h3 class="purchase-indicators__hws-header">ГВС</h3>
-            <input type="number" class="purchase-indicators__hws-num" placeholder="0.00">
+            <input type="number" class="purchase-indicators__hws-num standard-input" placeholder="0.00">
         </div>
         <div class="purchase-indicators__total-score">
-            <p>Итого к оплате <b>0.00</b> руб., в том числе коммисия <b>0.00</b> руб.</p>
+            <p>Итого к оплате <b class="change-parameter__total-score">0.00</b> руб., в том числе коммисия <b>0.00</b> руб.</p>
         </div>
     </div>
     <hr class="purchase-hr orange-hr">
@@ -46,7 +46,7 @@ require_once ("common/chekAuth.php");
                     <input type="checkbox" class="purchase-payment__check-checkbox">
                     <h3 class="purchase-indicators__check-header">Прислать квинтанцию на почту?</h3>
                 </div>
-                <input type="email" class="purchase-indicators__email" placeholder="Ваша электронная почта">
+                <input type="email" class="purchase-indicators__email standard-input" placeholder="Ваша электронная почта" value="<?=$_SESSION['user_email']?>">
             </div>
             <input type="submit" value="Отправить" class="purchase-indicators__submit">
         </form>

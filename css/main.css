@@ -23,7 +23,7 @@ main{
 input, button{
     outline:none;
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, label, th{
     font-family: Gilroy-Bold, serif;
 }
 .parallax-points__image-top{
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6{
     z-index: 1;
     width: 450px;
 }
-p, span, a{
+p, span, a, ul, td{
     font-family: Gilroy-Regular, serif;
 }
 /*Navigation bar CSS*/
@@ -271,7 +271,8 @@ nav{
     opacity: 0.4;
     font-size: 24px;
     text-decoration: none;
-    margin-left: 23px;
+    margin-left: 10px;
+    display: flex;
 }
 .socials__link:hover{
     opacity: 1;
@@ -301,16 +302,17 @@ nav{
 }
 .tech-support, .tech-support__chat, .tech-support__phone{
     display: flex;
+    align-items: center;
+}
+.tech-support{
+    width: 40%;
+    justify-content: space-between;
 }
 .tech-support__image-link{
     text-decoration: none;
 }
 .chat__image-link{
     margin-right: 17px;
-}
-.chat__text-link{
-    margin-right: 105px;
-    padding-top: 5px;
 }
 .phone__image{
     margin-right:17px;
@@ -683,6 +685,18 @@ nav{
 .mpa-hr{
     margin-bottom: 20px;
 }
+.contact-info{
+    padding: 20px;
+}
+.contact-info__wrapper{
+    display: flex;
+}
+.contact-info__left, .contact-info__right{
+    width: 50%;
+}
+.contact-info__left{
+    padding-right: 20px;
+}
 .upper-info, .mid-info{
     display: flex;
     justify-content: space-between;
@@ -754,6 +768,7 @@ nav{
     color: #FFFFFF;
     font-family: Gilroy-Regular, serif;
     font-size: 16px;
+    border: none;
 }
 .upper-info__right button:hover{
     position: relative;
@@ -765,12 +780,13 @@ nav{
     font-family: Gilroy-Regular, serif;
     font-size: 16px;
 }
-.mid-info h3{
+.mpa__mini-header{
     color: #717798;
     text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 6px;
+    font-size: 10pt;
     font-family: Gilroy-SemiBold, serif;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
 .serving__fillable{
     font-size: 21px;
@@ -831,6 +847,7 @@ nav{
     margin-bottom: 19px;
     background-color: #149859;
     color: #FFFFFF;
+    border: none;
 }
 .buttons__btn-activate:hover{
     background-color: #0f6f41;
@@ -838,6 +855,7 @@ nav{
 }
 .buttons__btn-deactivate{
     background-color: transparent;
+    border: 1px solid #000;
 }
 .buttons__btn-deactivate:hover{
     background-color: #dedede;
@@ -1064,16 +1082,87 @@ nav{
     font-family: Gilroy-Regular, serif;
     font-size: 16px;
 }
-.mid-info h3{
-    color: #717798;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 6px;
+.mpa__header{
+    color:  #1D0071;
+    font-size: 21px;
+}
+.mpa__phone, .mpa__email{
+    display: flex;
+    color: #1D0071;
+    font-size: 12pt;
+    align-items: center;
+    margin-top: 10px;
+}
+.mpa__phone-left, .mpa__email-left{
+    display: flex;
+    font-size: 12pt;
+    align-items: center;
+    width: 63%;
+}
+.mpa__phone-number, .mpa__email-inp{
+    font-size: 16pt;
+    color: #1D0071;
     font-family: Gilroy-SemiBold, serif;
 }
+.contacts__phones form, .contacts__emails{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+.contacts__phone-add, .contacts__emails-add{
+    font-family: Gilroy-Medium, serif;
+    padding: 15px 60px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.mpa__paper-wrapper{
+    display: flex;
+    align-items: center;
+    color: #1D0071;
+}
+.mpa__paper{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.mpa__phone i, .mpa__email i{
+    margin-right: 10px;
+}
+.mpa__phone button, .mpa__email button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #1D0071;
+    font-size: 12pt;
+}
+.mpa__phone button:hover{
+    color: #2600ad;
+}
+.mpa__information{
+    margin: 50px 20px 80px;
+}
+.mpa__information-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 10px;
+}
+.mpa__information-table td, .mpa__information-table th{
+    border-bottom: 1px solid rgba(0,0,0,.4);
+    padding: 10px 2px;
+    text-align: left;
+    font-family: Gilroy-SemiBold, serif;
+}
+.mpa__information-table td{
+    font-size: 14pt;
+}
+
+.invoice-indication__header{
+    margin-bottom: 20px;
+}
+.contact-info__header{
+    margin-bottom: 10px;
+}
 .serving__fillable{
-    font-size: 21px;
-    color:  #1D0071;
     font-family: Gilroy-SemiBold, serif !important;
 }
 .mid-info__separator{
@@ -1088,8 +1177,6 @@ nav{
 }
 .right__invoice-indication h3{
     text-transform: none;
-    font-size: 21px;
-    color:  #1D0071;
     font-family: Gilroy-SemiBold, serif ;
 }
 .right__invoice-indication{
@@ -1152,6 +1239,7 @@ nav{
 }
 .purchase-payment__check-checkbox{
     margin-right: 10px;
+    cursor: pointer;
 }
 .purchase-payment{
     margin: 20px 0 90px;
@@ -1167,12 +1255,24 @@ nav{
     transition: background-color .2s ease-in-out;
 }
 
-.purchase-indicators__heating-num, .purchase-indicators__hws-num, .purchase-indicators__email{
+.standard-input{
     padding-bottom: 5px;
     color: #000;
     font-size: 18px;
     border: none;
     border-bottom: rgba(181, 102, 239, .5) 1px solid;
+    font-family: Gilroy-Regular, serif;
+    outline: none;
+    background: transparent;
+}
+.mpa-input{
+    border: rgba(181, 102, 239, .5) 1px solid;
+    padding: 10px;
+    width: 100%;
+    margin-right: 25px;
+    margin-top: 3px;
+    color: #000;
+    font-size: 18px;
     font-family: Gilroy-Regular, serif;
     outline: none;
     background: transparent;
@@ -1269,7 +1369,108 @@ nav{
     padding: 10px;
     border-bottom: 1px solid rgba(181, 102, 239, .5);
 }
+.statement__steps{
+    margin: 0 15vw;
+    display: none;
+}
+.statement__steps h3{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18pt;
+}
+.statement__steps-nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.step-nav{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+.step-nav__active{
+    cursor: pointer;
+}
+.step-nav p{
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgba(0,0,0,.5);
+    font-weight: bold;
+}
+.step-nav__active p{
+    color: #e85222;
+    transition: color .5s;
+}
+.step-icon{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    border: 3px solid rgba(0,0,0,.5);
+    color: rgba(0,0,0,.5);
+    font-family: Gilroy-Regular, serif;
+}
+.step-nav__active .step-icon{
+    border: none;
+    color: white;
+    background: #e85222;
+    transition: background .5s;
+}
+.statement__arrow-right{
+    display: flex;
+    align-items: center;
+    font-size: 20pt;
+    color: rgba(0,0,0,.5);
+}
+.statement__arrow-active{
+    color: #e85222;
+}
+.step-nav__active:hover .step-icon{
+    background: #d43809;
+}
+.step-nav__active:hover p{
+    color: #d43809;
+}
 
+.statement__steps h2{
+    margin-bottom: 10px;
+}
+.org-type__select{
+    margin-top: 30px;
+}
+.org-type__select ul{
+    margin: 10px 0 0 40px;
+    font-family: Gilroy-Regular, serif;
+}
+.org-type__buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.org-type__btn-cancel, .org-type__btn-next{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 50px;
+    color: #fff;
+    font-family: Gilroy-Regular, serif;
+    font-size: 14pt;
+    cursor: pointer;
+    transition: background-color .25s;
+}
+.org-type__btn-cancel{
+    background: #FF7070;
+}
+.org-type__btn-next{
+    display: none;
+    background: #1bb166;
+}
+
+/*payments*/
 .payments-table__headers th{
     width: auto;
 }

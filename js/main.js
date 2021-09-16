@@ -310,3 +310,50 @@ $(function() {
     cb(start, end);
 
 });
+
+// purchase counter fn
+$('.purchase-indicators__submit').prop( "disabled", true );
+function purchaseCounter(){
+    let counterHeating = parseInt($( ".purchase-indicators__heating-num" ).val());
+    let counterHws = parseInt($( ".purchase-indicators__hws-num" ).val());
+    if (isNaN(counterHws)){
+        counterHws = 0;
+    }
+    if (isNaN(counterHeating)){
+        counterHeating = 0;
+    }
+    if ((counterHws === 0) || (counterHeating === 0)){
+        $('.purchase-indicators__submit').prop( "disabled", true );
+    }else{
+        $('.purchase-indicators__submit').prop( "disabled", false );
+    }
+
+    $( ".change-parameter__total-score" ).html(counterHeating + counterHws);
+}
+$( ".purchase-indicators__heating-num" ).keyup(function() {
+    purchaseCounter();
+});
+$( ".purchase-indicators__hws-num" ).keyup(function() {
+    purchaseCounter();
+});
+
+//purchase send email
+$('.purchase-indicators__email').prop( "disabled", false );
+
+setInterval(function() {
+    if (!$(".purchase-payment__check-checkbox").is(':checked')){
+        $('.purchase-indicators__email').prop( "disabled", true ).addClass("disabled");
+    }else{
+        $('.purchase-indicators__email').prop( "disabled", false ).removeClass("disabled");
+    }
+});
+
+// statement
+$(".statement__btn").on("click", function (){
+    $(".statement__main-screen").toggle("slow");
+    $(".statement__steps").toggle("slow");
+});
+$("#statement-steps__close").on("click", function (){
+    $(".statement__main-screen").toggle("slow");
+    $(".statement__steps").toggle("slow");
+});
